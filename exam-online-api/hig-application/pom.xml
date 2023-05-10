@@ -87,11 +87,11 @@
 		    <artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>		
 		 <!--oracle驱动-->
-		<dependency>
+		<!-- <dependency>
 		  <groupId>com.oracle</groupId>
 		  <artifactId>ojdbc8</artifactId>
 		  <version>${oracle.version}</version>
-		</dependency>		
+		</dependency>		 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>

@@ -1,4 +1,4 @@
--- ÏµÍ³¹ÜÀíÏà¹Ø
+ï»¿-- ç³»ç»Ÿç®¡ç†ç›¸å…³
 create table sys_dept
 (
 dept_id Int NOT NULL, 
@@ -273,13 +273,13 @@ create_time DATE NULL,
 constraint PK_sys_group  primary key (group_id)
 );
 
-COMMENT ON COLUMN sys_group.group_id IS '·Ö×éĞòºÅ';
-COMMENT ON COLUMN sys_group.group_code IS '·Ö×é´úÂë';
-COMMENT ON COLUMN sys_group.group_name IS '·Ö×éÃû³Æ';
-COMMENT ON COLUMN sys_group.group_describe IS '·Ö×éÃèÊö';
-COMMENT ON COLUMN sys_group.status IS '×´Ì¬';
-COMMENT ON COLUMN sys_group.create_by IS '´´½¨Õß';
-COMMENT ON COLUMN sys_group.create_time IS '´´½¨Ê±¼ä';
+COMMENT ON COLUMN sys_group.group_id IS 'åˆ†ç»„åºå·';
+COMMENT ON COLUMN sys_group.group_code IS 'åˆ†ç»„ä»£ç ';
+COMMENT ON COLUMN sys_group.group_name IS 'åˆ†ç»„åç§°';
+COMMENT ON COLUMN sys_group.group_describe IS 'åˆ†ç»„æè¿°';
+COMMENT ON COLUMN sys_group.status IS 'çŠ¶æ€';
+COMMENT ON COLUMN sys_group.create_by IS 'åˆ›å»ºè€…';
+COMMENT ON COLUMN sys_group.create_time IS 'åˆ›å»ºæ—¶é—´';
 
 create table sys_group_person
 (
@@ -290,9 +290,9 @@ constraint PK_sys_group_person  primary key (group_code, person_code)
 );
 
 
-COMMENT ON COLUMN sys_group_person.group_code IS '·Ö×é´úÂë';
-COMMENT ON COLUMN sys_group_person.person_code IS 'ÈËÔ±´úÂë';
-COMMENT ON COLUMN sys_group_person.order_id IS '×éÄÚÅÅĞò';
+COMMENT ON COLUMN sys_group_person.group_code IS 'åˆ†ç»„ä»£ç ';
+COMMENT ON COLUMN sys_group_person.person_code IS 'äººå‘˜ä»£ç ';
+COMMENT ON COLUMN sys_group_person.order_id IS 'ç»„å†…æ’åº';
 
 
 create table sys_user_choice
@@ -303,9 +303,9 @@ order_id int null,
 constraint PK_sys_user_choice  primary key (choice_code, user_code)
 );
 
-COMMENT ON COLUMN sys_user_choice.choice_code IS 'Ñ¡Ôñ´úÂë';
-COMMENT ON COLUMN sys_user_choice.user_code IS 'ÓÃ»§´úÂë';
-COMMENT ON COLUMN sys_user_choice.order_id IS 'ÄÚ²¿ÅÅĞò';
+COMMENT ON COLUMN sys_user_choice.choice_code IS 'é€‰æ‹©ä»£ç ';
+COMMENT ON COLUMN sys_user_choice.user_code IS 'ç”¨æˆ·ä»£ç ';
+COMMENT ON COLUMN sys_user_choice.order_id IS 'å†…éƒ¨æ’åº';
 
 create table gen_table
 (
@@ -365,7 +365,7 @@ constraint PK_gen_table_column  primary key (column_id,table_id)
 
 
 -- ----------------------------
--- 1¡¢´æ´¢Ã¿Ò»¸öÒÑÅäÖÃµÄ jobDetail µÄÏêÏ¸ĞÅÏ¢
+-- 1ã€å­˜å‚¨æ¯ä¸€ä¸ªå·²é…ç½®çš„ jobDetail çš„è¯¦ç»†ä¿¡æ¯
 -- ----------------------------
 create table qrtz_job_details (
     sched_name varchar2(120) not null,
@@ -382,7 +382,7 @@ create table qrtz_job_details (
 );
 
 -- ----------------------------
--- 2¡¢ ´æ´¢ÒÑÅäÖÃµÄ Trigger µÄĞÅÏ¢
+-- 2ã€ å­˜å‚¨å·²é…ç½®çš„ Trigger çš„ä¿¡æ¯
 -- ----------------------------
 create table qrtz_triggers (
     sched_name varchar2(120) not null,
@@ -407,7 +407,7 @@ create table qrtz_triggers (
 );
 
 -- ----------------------------
--- 3¡¢ ´æ´¢¼òµ¥µÄ Trigger£¬°üÀ¨ÖØ¸´´ÎÊı£¬¼ä¸ô£¬ÒÔ¼°ÒÑ´¥·¢µÄ´ÎÊı
+-- 3ã€ å­˜å‚¨ç®€å•çš„ Triggerï¼ŒåŒ…æ‹¬é‡å¤æ¬¡æ•°ï¼Œé—´éš”ï¼Œä»¥åŠå·²è§¦å‘çš„æ¬¡æ•°
 -- ----------------------------
 create table qrtz_simple_triggers (
     sched_name varchar2(120) not null,
@@ -422,7 +422,7 @@ create table qrtz_simple_triggers (
 );
 
 -- ----------------------------
--- 4¡¢ ´æ´¢ Cron Trigger£¬°üÀ¨ Cron ±í´ïÊ½ºÍÊ±ÇøĞÅÏ¢
+-- 4ã€ å­˜å‚¨ Cron Triggerï¼ŒåŒ…æ‹¬ Cron è¡¨è¾¾å¼å’Œæ—¶åŒºä¿¡æ¯
 -- ---------------------------- 
 create table qrtz_cron_triggers (
     sched_name varchar2(120) not null,
@@ -436,7 +436,7 @@ create table qrtz_cron_triggers (
 );
 
 -- ----------------------------
--- 5¡¢ Trigger ×÷Îª Blob ÀàĞÍ´æ´¢(ÓÃÓÚ Quartz ÓÃ»§ÓÃ JDBC ´´½¨ËûÃÇ×Ô¼º¶¨ÖÆµÄ Trigger ÀàĞÍ£¬JobStore ²¢²»ÖªµÀÈçºÎ´æ´¢ÊµÀıµÄÊ±ºò)
+-- 5ã€ Trigger ä½œä¸º Blob ç±»å‹å­˜å‚¨(ç”¨äº Quartz ç”¨æˆ·ç”¨ JDBC åˆ›å»ºä»–ä»¬è‡ªå·±å®šåˆ¶çš„ Trigger ç±»å‹ï¼ŒJobStore å¹¶ä¸çŸ¥é“å¦‚ä½•å­˜å‚¨å®ä¾‹çš„æ—¶å€™)
 -- ---------------------------- 
 create table qrtz_blob_triggers (
     sched_name varchar2(120) not null,
@@ -449,7 +449,7 @@ create table qrtz_blob_triggers (
 );
 
 -- ----------------------------
--- 6¡¢ ÒÔ Blob ÀàĞÍ´æ´¢´æ·ÅÈÕÀúĞÅÏ¢£¬ quartz¿ÉÅäÖÃÒ»¸öÈÕÀúÀ´Ö¸¶¨Ò»¸öÊ±¼ä·¶Î§
+-- 6ã€ ä»¥ Blob ç±»å‹å­˜å‚¨å­˜æ”¾æ—¥å†ä¿¡æ¯ï¼Œ quartzå¯é…ç½®ä¸€ä¸ªæ—¥å†æ¥æŒ‡å®šä¸€ä¸ªæ—¶é—´èŒƒå›´
 -- ---------------------------- 
 create table qrtz_calendars (
     sched_name varchar2(120) not null,
@@ -459,7 +459,7 @@ create table qrtz_calendars (
 );
 
 -- ----------------------------
--- 7¡¢ ´æ´¢ÒÑÔİÍ£µÄ Trigger ×éµÄĞÅÏ¢
+-- 7ã€ å­˜å‚¨å·²æš‚åœçš„ Trigger ç»„çš„ä¿¡æ¯
 -- ---------------------------- 
 create table qrtz_paused_trigger_grps (
     sched_name varchar2(120) not null,
@@ -468,7 +468,7 @@ create table qrtz_paused_trigger_grps (
 );
 
 -- ----------------------------
--- 8¡¢ ´æ´¢ÓëÒÑ´¥·¢µÄ Trigger Ïà¹ØµÄ×´Ì¬ĞÅÏ¢£¬ÒÔ¼°ÏàÁª Job µÄÖ´ĞĞĞÅÏ¢
+-- 8ã€ å­˜å‚¨ä¸å·²è§¦å‘çš„ Trigger ç›¸å…³çš„çŠ¶æ€ä¿¡æ¯ï¼Œä»¥åŠç›¸è” Job çš„æ‰§è¡Œä¿¡æ¯
 -- ---------------------------- 
 create table qrtz_fired_triggers (
     sched_name varchar2(120) not null,
@@ -488,7 +488,7 @@ create table qrtz_fired_triggers (
 );
 
 -- ----------------------------
--- 9¡¢ ´æ´¢ÉÙÁ¿µÄÓĞ¹Ø Scheduler µÄ×´Ì¬ĞÅÏ¢£¬¼ÙÈçÊÇÓÃÓÚ¼¯ÈºÖĞ£¬¿ÉÒÔ¿´µ½ÆäËûµÄ Scheduler ÊµÀı
+-- 9ã€ å­˜å‚¨å°‘é‡çš„æœ‰å…³ Scheduler çš„çŠ¶æ€ä¿¡æ¯ï¼Œå‡å¦‚æ˜¯ç”¨äºé›†ç¾¤ä¸­ï¼Œå¯ä»¥çœ‹åˆ°å…¶ä»–çš„ Scheduler å®ä¾‹
 -- ---------------------------- 
 create table qrtz_scheduler_state (
     sched_name varchar2(120) not null,
@@ -499,7 +499,7 @@ create table qrtz_scheduler_state (
 );
 
 -- ----------------------------
--- 10¡¢ ´æ´¢³ÌĞòµÄ±¯¹ÛËøµÄĞÅÏ¢(¼ÙÈçÊ¹ÓÃÁË±¯¹ÛËø)
+-- 10ã€ å­˜å‚¨ç¨‹åºçš„æ‚²è§‚é”çš„ä¿¡æ¯(å‡å¦‚ä½¿ç”¨äº†æ‚²è§‚é”)
 -- ---------------------------- 
 create table qrtz_locks (
     sched_name varchar2(120) not null,
@@ -554,7 +554,7 @@ create index idx_qrtz_ft_tg on qrtz_fired_triggers(sched_name,trigger_group);
 
 commit;
 
--- ×ÊÁÏ¹ÜÀíÏà¹Ø
+-- èµ„æ–™ç®¡ç†ç›¸å…³
 create table fms_photo
 (
 photo_id Int NOT NULL, 
@@ -569,15 +569,15 @@ status Int NULL,
 constraint PK_fms_photo  primary key (photo_id)
 );
 
-COMMENT ON COLUMN fms_photo.photo_id IS 'Í¼Æ¬ĞòºÅ';
-COMMENT ON COLUMN fms_photo.file_name IS 'ÎÄ¼şÃû³Æ';
-COMMENT ON COLUMN fms_photo.photo_path IS 'Í¼Æ¬Â·¾¶';
-COMMENT ON COLUMN fms_photo.photo_url IS 'Í¼Æ¬Á´½Ó';
-COMMENT ON COLUMN fms_photo.original_name IS 'Ô­Ê¼Ãû³Æ';
-COMMENT ON COLUMN fms_photo.upload_name IS 'ÉÏ´«Õß';
-COMMENT ON COLUMN fms_photo.upload_dept IS 'ÉÏ´«²¿ÃÅ';
-COMMENT ON COLUMN fms_photo.upload_time IS 'ÉÏ´«Ê±¼ä';
-COMMENT ON COLUMN fms_photo.status IS '×´Ì¬';
+COMMENT ON COLUMN fms_photo.photo_id IS 'å›¾ç‰‡åºå·';
+COMMENT ON COLUMN fms_photo.file_name IS 'æ–‡ä»¶åç§°';
+COMMENT ON COLUMN fms_photo.photo_path IS 'å›¾ç‰‡è·¯å¾„';
+COMMENT ON COLUMN fms_photo.photo_url IS 'å›¾ç‰‡é“¾æ¥';
+COMMENT ON COLUMN fms_photo.original_name IS 'åŸå§‹åç§°';
+COMMENT ON COLUMN fms_photo.upload_name IS 'ä¸Šä¼ è€…';
+COMMENT ON COLUMN fms_photo.upload_dept IS 'ä¸Šä¼ éƒ¨é—¨';
+COMMENT ON COLUMN fms_photo.upload_time IS 'ä¸Šä¼ æ—¶é—´';
+COMMENT ON COLUMN fms_photo.status IS 'çŠ¶æ€';
 
 create table fms_files
 (
@@ -596,21 +596,21 @@ status Int NULL,
 constraint PK_fms_files  primary key (file_id)
 );
 
-COMMENT ON COLUMN fms_files.file_id IS 'ÎÄ¼şĞòºÅ';
-COMMENT ON COLUMN fms_files.file_title IS 'ÎÄ¼ş±êÌâ';
-COMMENT ON COLUMN fms_files.file_describe IS 'ÎÄ¼şÃèÊö';
-COMMENT ON COLUMN fms_files.file_name IS 'ÎÄ¼şÃû³Æ';
-COMMENT ON COLUMN fms_files.file_path IS 'ÎÄ¼şÂ·¾¶';
-COMMENT ON COLUMN fms_files.file_url IS 'ÎÄ¼şÁ´½Ó';
-COMMENT ON COLUMN fms_files.file_suffix IS 'ÎÄ¼şÀàĞÍ';
-COMMENT ON COLUMN fms_files.original_name IS 'Ô­Ê¼Ãû³Æ';
-COMMENT ON COLUMN fms_files.upload_name IS 'ÉÏ´«Õß';
-COMMENT ON COLUMN fms_files.upload_dept IS 'ÉÏ´«²¿ÃÅ';
-COMMENT ON COLUMN fms_files.upload_time IS 'ÉÏ´«Ê±¼ä';
-COMMENT ON COLUMN fms_files.status IS '×´Ì¬';
+COMMENT ON COLUMN fms_files.file_id IS 'æ–‡ä»¶åºå·';
+COMMENT ON COLUMN fms_files.file_title IS 'æ–‡ä»¶æ ‡é¢˜';
+COMMENT ON COLUMN fms_files.file_describe IS 'æ–‡ä»¶æè¿°';
+COMMENT ON COLUMN fms_files.file_name IS 'æ–‡ä»¶åç§°';
+COMMENT ON COLUMN fms_files.file_path IS 'æ–‡ä»¶è·¯å¾„';
+COMMENT ON COLUMN fms_files.file_url IS 'æ–‡ä»¶é“¾æ¥';
+COMMENT ON COLUMN fms_files.file_suffix IS 'æ–‡ä»¶ç±»å‹';
+COMMENT ON COLUMN fms_files.original_name IS 'åŸå§‹åç§°';
+COMMENT ON COLUMN fms_files.upload_name IS 'ä¸Šä¼ è€…';
+COMMENT ON COLUMN fms_files.upload_dept IS 'ä¸Šä¼ éƒ¨é—¨';
+COMMENT ON COLUMN fms_files.upload_time IS 'ä¸Šä¼ æ—¶é—´';
+COMMENT ON COLUMN fms_files.status IS 'çŠ¶æ€';
 
 
--- ¿¼ÊÔÏµÍ³Ïà¹Ø
+-- è€ƒè¯•ç³»ç»Ÿç›¸å…³
 create table exam_type
 (
 type_id Int NOT NULL, 
@@ -625,14 +625,14 @@ constraint PK_exam_type  primary key (type_id)
 );
 
 
-COMMENT ON COLUMN exam_type.type_id IS 'Àà±ğid';
-COMMENT ON COLUMN exam_type.parent_id IS 'ÉÏ¼¶Àà±ğID';
-COMMENT ON COLUMN exam_type.type_code IS 'Àà±ğ´úÂë';
-COMMENT ON COLUMN exam_type.type_name IS 'Àà±ğÃû³Æ';
-COMMENT ON COLUMN exam_type.order_id IS 'Ë³ĞòId';
-COMMENT ON COLUMN exam_type.status IS '×´Ì¬';
-COMMENT ON COLUMN exam_type.create_by IS '´´½¨Õß';
-COMMENT ON COLUMN exam_type.create_time IS '´´½¨Ê±¼ä';
+COMMENT ON COLUMN exam_type.type_id IS 'ç±»åˆ«id';
+COMMENT ON COLUMN exam_type.parent_id IS 'ä¸Šçº§ç±»åˆ«ID';
+COMMENT ON COLUMN exam_type.type_code IS 'ç±»åˆ«ä»£ç ';
+COMMENT ON COLUMN exam_type.type_name IS 'ç±»åˆ«åç§°';
+COMMENT ON COLUMN exam_type.order_id IS 'é¡ºåºId';
+COMMENT ON COLUMN exam_type.status IS 'çŠ¶æ€';
+COMMENT ON COLUMN exam_type.create_by IS 'åˆ›å»ºè€…';
+COMMENT ON COLUMN exam_type.create_time IS 'åˆ›å»ºæ—¶é—´';
 
 
 create table exam_questions_bank
@@ -656,21 +656,21 @@ constraint PK_exam_questions_bank  primary key (bank_code)
 );
 
 
-COMMENT ON COLUMN exam_questions_bank.bank_id IS 'Ìâ¿âid';
-COMMENT ON COLUMN exam_questions_bank.bank_code IS 'Ìâ¿â´úÂë';
-COMMENT ON COLUMN exam_questions_bank.bank_name IS 'Ìâ¿âÃû³Æ';
-COMMENT ON COLUMN exam_questions_bank.bank_describe IS 'Ìâ¿âÃèÊö';
-COMMENT ON COLUMN exam_questions_bank.bank_version IS 'Ìâ¿â°æ±¾';
-COMMENT ON COLUMN exam_questions_bank.exam_type IS '¿¼ÊÔÀàĞÍ';
-COMMENT ON COLUMN exam_questions_bank.online_date IS 'ÉÏÏßÈÕÆÚ';
-COMMENT ON COLUMN exam_questions_bank.picture_url IS 'Í¼Æ¬Á´½Ó';
-COMMENT ON COLUMN exam_questions_bank.radio_score IS 'µ¥Ñ¡·ÖÊı';
-COMMENT ON COLUMN exam_questions_bank.choice_score IS '¶àÑ¡·ÖÊı';
-COMMENT ON COLUMN exam_questions_bank.judge_score IS 'ÅĞ¶Ï·ÖÊı';
-COMMENT ON COLUMN exam_questions_bank.status IS '×´Ì¬';
-COMMENT ON COLUMN exam_questions_bank.create_by IS '´´½¨Õß';
-COMMENT ON COLUMN exam_questions_bank.create_dept IS '´´½¨²¿ÃÅ';
-COMMENT ON COLUMN exam_questions_bank.create_time IS '´´½¨Ê±¼ä';
+COMMENT ON COLUMN exam_questions_bank.bank_id IS 'é¢˜åº“id';
+COMMENT ON COLUMN exam_questions_bank.bank_code IS 'é¢˜åº“ä»£ç ';
+COMMENT ON COLUMN exam_questions_bank.bank_name IS 'é¢˜åº“åç§°';
+COMMENT ON COLUMN exam_questions_bank.bank_describe IS 'é¢˜åº“æè¿°';
+COMMENT ON COLUMN exam_questions_bank.bank_version IS 'é¢˜åº“ç‰ˆæœ¬';
+COMMENT ON COLUMN exam_questions_bank.exam_type IS 'è€ƒè¯•ç±»å‹';
+COMMENT ON COLUMN exam_questions_bank.online_date IS 'ä¸Šçº¿æ—¥æœŸ';
+COMMENT ON COLUMN exam_questions_bank.picture_url IS 'å›¾ç‰‡é“¾æ¥';
+COMMENT ON COLUMN exam_questions_bank.radio_score IS 'å•é€‰åˆ†æ•°';
+COMMENT ON COLUMN exam_questions_bank.choice_score IS 'å¤šé€‰åˆ†æ•°';
+COMMENT ON COLUMN exam_questions_bank.judge_score IS 'åˆ¤æ–­åˆ†æ•°';
+COMMENT ON COLUMN exam_questions_bank.status IS 'çŠ¶æ€';
+COMMENT ON COLUMN exam_questions_bank.create_by IS 'åˆ›å»ºè€…';
+COMMENT ON COLUMN exam_questions_bank.create_dept IS 'åˆ›å»ºéƒ¨é—¨';
+COMMENT ON COLUMN exam_questions_bank.create_time IS 'åˆ›å»ºæ—¶é—´';
 
 
 create table exam_bank_picture
@@ -687,15 +687,15 @@ status Int null,
 constraint PK_exam_bank_picture  primary key (photo_code)
 );
 
-COMMENT ON COLUMN exam_bank_picture.photo_id IS 'Í¼Æ¬ĞòºÅ';
-COMMENT ON COLUMN exam_bank_picture.photo_code IS 'Í¼Æ¬´úÂë';
-COMMENT ON COLUMN exam_bank_picture.photo_path IS 'ÎÄµµ´úÂë';
-COMMENT ON COLUMN exam_bank_picture.photo_url IS 'Í¼Æ¬Á´½Ó';
-COMMENT ON COLUMN exam_bank_picture.file_name IS 'ÎÄ¼şÃû³Æ';
-COMMENT ON COLUMN exam_bank_picture.original_name IS 'Ô­Ê¼Ãû³Æ';
-COMMENT ON COLUMN exam_bank_picture.create_by IS '´´½¨Õß';
-COMMENT ON COLUMN exam_bank_picture.create_time IS '´´½¨Ê±¼ä';
-COMMENT ON COLUMN exam_bank_picture.status IS '×´Ì¬';
+COMMENT ON COLUMN exam_bank_picture.photo_id IS 'å›¾ç‰‡åºå·';
+COMMENT ON COLUMN exam_bank_picture.photo_code IS 'å›¾ç‰‡ä»£ç ';
+COMMENT ON COLUMN exam_bank_picture.photo_path IS 'æ–‡æ¡£ä»£ç ';
+COMMENT ON COLUMN exam_bank_picture.photo_url IS 'å›¾ç‰‡é“¾æ¥';
+COMMENT ON COLUMN exam_bank_picture.file_name IS 'æ–‡ä»¶åç§°';
+COMMENT ON COLUMN exam_bank_picture.original_name IS 'åŸå§‹åç§°';
+COMMENT ON COLUMN exam_bank_picture.create_by IS 'åˆ›å»ºè€…';
+COMMENT ON COLUMN exam_bank_picture.create_time IS 'åˆ›å»ºæ—¶é—´';
+COMMENT ON COLUMN exam_bank_picture.status IS 'çŠ¶æ€';
 
 create table exam_questions_content
 (
@@ -705,8 +705,8 @@ constraint PK_exam_questions_content  primary key (questions_code)
 );
 
 
-COMMENT ON COLUMN exam_questions_content.questions_code IS 'ÊÔÌâ´úÂë';
-COMMENT ON COLUMN exam_questions_content.questions_content IS 'ÊÔÌâÌâÄ¿';
+COMMENT ON COLUMN exam_questions_content.questions_code IS 'è¯•é¢˜ä»£ç ';
+COMMENT ON COLUMN exam_questions_content.questions_content IS 'è¯•é¢˜é¢˜ç›®';
 
 
 create table exam_questions_property
@@ -728,19 +728,19 @@ constraint PK_exam_questions_property  primary key (questions_code)
 );
 
 
-COMMENT ON COLUMN exam_questions_property.bank_code IS 'Ìâ¿â´úÂë';
-COMMENT ON COLUMN exam_questions_property.questions_id IS 'ÊÔÌâid';
-COMMENT ON COLUMN exam_questions_property.questions_code IS 'ÊÔÌâ´úÂë';
-COMMENT ON COLUMN exam_questions_property.questions_title IS 'ÊÔÌâÌâÄ¿';
-COMMENT ON COLUMN exam_questions_property.questions_type IS 'ÊÔÌâÀàĞÍ';
-COMMENT ON COLUMN exam_questions_property.questions_score IS 'ÌâÄ¿·ÖÊı';
-COMMENT ON COLUMN exam_questions_property.rate_number IS '¸´ÔÓ¶È';
-COMMENT ON COLUMN exam_questions_property.right_answer IS 'ÕıÈ·´ğ°¸';
-COMMENT ON COLUMN exam_questions_property.answer_analyse IS '´ğ°¸·ÖÎö';
-COMMENT ON COLUMN exam_questions_property.status IS '×´Ì¬';
-COMMENT ON COLUMN exam_questions_property.create_by IS '´´½¨Õß';
-COMMENT ON COLUMN exam_questions_property.create_dept IS '´´½¨²¿ÃÅ';
-COMMENT ON COLUMN exam_questions_property.create_time IS '´´½¨Ê±¼ä';
+COMMENT ON COLUMN exam_questions_property.bank_code IS 'é¢˜åº“ä»£ç ';
+COMMENT ON COLUMN exam_questions_property.questions_id IS 'è¯•é¢˜id';
+COMMENT ON COLUMN exam_questions_property.questions_code IS 'è¯•é¢˜ä»£ç ';
+COMMENT ON COLUMN exam_questions_property.questions_title IS 'è¯•é¢˜é¢˜ç›®';
+COMMENT ON COLUMN exam_questions_property.questions_type IS 'è¯•é¢˜ç±»å‹';
+COMMENT ON COLUMN exam_questions_property.questions_score IS 'é¢˜ç›®åˆ†æ•°';
+COMMENT ON COLUMN exam_questions_property.rate_number IS 'å¤æ‚åº¦';
+COMMENT ON COLUMN exam_questions_property.right_answer IS 'æ­£ç¡®ç­”æ¡ˆ';
+COMMENT ON COLUMN exam_questions_property.answer_analyse IS 'ç­”æ¡ˆåˆ†æ';
+COMMENT ON COLUMN exam_questions_property.status IS 'çŠ¶æ€';
+COMMENT ON COLUMN exam_questions_property.create_by IS 'åˆ›å»ºè€…';
+COMMENT ON COLUMN exam_questions_property.create_dept IS 'åˆ›å»ºéƒ¨é—¨';
+COMMENT ON COLUMN exam_questions_property.create_time IS 'åˆ›å»ºæ—¶é—´';
 
 
 create table exam_questions_answer
@@ -754,11 +754,11 @@ constraint PK_exam_questions_answer  primary key (questions_code, option_code)
 );
 
 
-COMMENT ON COLUMN exam_questions_answer.questions_code IS 'ÊÔÌâ´úÂë';
-COMMENT ON COLUMN exam_questions_answer.option_code IS 'ÊÔÌâÑ¡Ïî';
-COMMENT ON COLUMN exam_questions_answer.option_describe IS 'Ñ¡ÏîÃèÊö';
-COMMENT ON COLUMN exam_questions_answer.Is_right IS 'ÊÇ·ñÕıÈ·';
-COMMENT ON COLUMN exam_questions_answer.order_id IS 'ÅÅĞò±àºÅ';
+COMMENT ON COLUMN exam_questions_answer.questions_code IS 'è¯•é¢˜ä»£ç ';
+COMMENT ON COLUMN exam_questions_answer.option_code IS 'è¯•é¢˜é€‰é¡¹';
+COMMENT ON COLUMN exam_questions_answer.option_describe IS 'é€‰é¡¹æè¿°';
+COMMENT ON COLUMN exam_questions_answer.Is_right IS 'æ˜¯å¦æ­£ç¡®';
+COMMENT ON COLUMN exam_questions_answer.order_id IS 'æ’åºç¼–å·';
 
 create table exam_questions
 (
@@ -779,20 +779,20 @@ create_time DATE NULL,
 constraint PK_exam_questions  primary key (questions_code)
 );
 
-COMMENT ON COLUMN exam_questions.bank_code IS 'Ìâ¿â´úÂë';
-COMMENT ON COLUMN exam_questions.questions_id IS 'ÊÔÌâid';
-COMMENT ON COLUMN exam_questions.questions_code IS 'ÊÔÌâ´úÂë';
-COMMENT ON COLUMN exam_questions.questions_title IS 'ÊÔÌâÌâÄ¿';
-COMMENT ON COLUMN exam_questions.questions_content IS 'ÊÔÌâÄÚÈİ';
-COMMENT ON COLUMN exam_questions.questions_type IS 'ÊÔÌâÀàĞÍ';
-COMMENT ON COLUMN exam_questions.questions_score IS 'ÌâÄ¿·ÖÊı';
-COMMENT ON COLUMN exam_questions.rate_number IS '¸´ÔÓ¶È';
-COMMENT ON COLUMN exam_questions.right_answer IS 'ÕıÈ·´ğ°¸';
-COMMENT ON COLUMN exam_questions.answer_analyse IS '´ğ°¸·ÖÎö';
-COMMENT ON COLUMN exam_questions.status IS '×´Ì¬';
-COMMENT ON COLUMN exam_questions.create_by IS '´´½¨Õß';
-COMMENT ON COLUMN exam_questions.create_dept IS '´´½¨²¿ÃÅ';
-COMMENT ON COLUMN exam_questions.create_time IS '´´½¨Ê±¼ä';
+COMMENT ON COLUMN exam_questions.bank_code IS 'é¢˜åº“ä»£ç ';
+COMMENT ON COLUMN exam_questions.questions_id IS 'è¯•é¢˜id';
+COMMENT ON COLUMN exam_questions.questions_code IS 'è¯•é¢˜ä»£ç ';
+COMMENT ON COLUMN exam_questions.questions_title IS 'è¯•é¢˜é¢˜ç›®';
+COMMENT ON COLUMN exam_questions.questions_content IS 'è¯•é¢˜å†…å®¹';
+COMMENT ON COLUMN exam_questions.questions_type IS 'è¯•é¢˜ç±»å‹';
+COMMENT ON COLUMN exam_questions.questions_score IS 'é¢˜ç›®åˆ†æ•°';
+COMMENT ON COLUMN exam_questions.rate_number IS 'å¤æ‚åº¦';
+COMMENT ON COLUMN exam_questions.right_answer IS 'æ­£ç¡®ç­”æ¡ˆ';
+COMMENT ON COLUMN exam_questions.answer_analyse IS 'ç­”æ¡ˆåˆ†æ';
+COMMENT ON COLUMN exam_questions.status IS 'çŠ¶æ€';
+COMMENT ON COLUMN exam_questions.create_by IS 'åˆ›å»ºè€…';
+COMMENT ON COLUMN exam_questions.create_dept IS 'åˆ›å»ºéƒ¨é—¨';
+COMMENT ON COLUMN exam_questions.create_time IS 'åˆ›å»ºæ—¶é—´';
 
 
 create table exam_task_manager
@@ -817,22 +817,22 @@ constraint PK_exam_task_manager  primary key (exam_code)
 );
 
 
-COMMENT ON COLUMN exam_task_manager.exam_id IS '¿¼ÊÔĞòºÅ';
-COMMENT ON COLUMN exam_task_manager.exam_code IS '¿¼ÊÔ´úÂë';
-COMMENT ON COLUMN exam_task_manager.exam_name IS '¿¼ÊÔÃû³Æ';
-COMMENT ON COLUMN exam_task_manager.exam_describe IS '¿¼ÊÔËµÃ÷';
-COMMENT ON COLUMN exam_task_manager.build_type IS '×é¾í·½Ê½';
-COMMENT ON COLUMN exam_task_manager.force_done IS 'Ç¿ÖÆ³é¾í';
-COMMENT ON COLUMN exam_task_manager.exam_bank IS '¿¼ÊÔÌâ¿â';
-COMMENT ON COLUMN exam_task_manager.exam_bank_text IS '¿¼ÊÔÌâ¿âÎÄ×Ö';
-COMMENT ON COLUMN exam_task_manager.picture_url IS 'Í¼Æ¬Á´½Ó';
-COMMENT ON COLUMN exam_task_manager.start_time IS '¿ªÊ¼Ê±¼ä';
-COMMENT ON COLUMN exam_task_manager.end_time IS '½áÊøÊ±¼ä';
-COMMENT ON COLUMN exam_task_manager.exam_duration IS '¿¼ÊÔÊ±³¤';
-COMMENT ON COLUMN exam_task_manager.status IS '×´Ì¬';
-COMMENT ON COLUMN exam_task_manager.create_by IS '´´½¨Õß';
-COMMENT ON COLUMN exam_task_manager.create_dept IS '´´½¨²¿ÃÅ';
-COMMENT ON COLUMN exam_task_manager.create_time IS '´´½¨Ê±¼ä';
+COMMENT ON COLUMN exam_task_manager.exam_id IS 'è€ƒè¯•åºå·';
+COMMENT ON COLUMN exam_task_manager.exam_code IS 'è€ƒè¯•ä»£ç ';
+COMMENT ON COLUMN exam_task_manager.exam_name IS 'è€ƒè¯•åç§°';
+COMMENT ON COLUMN exam_task_manager.exam_describe IS 'è€ƒè¯•è¯´æ˜';
+COMMENT ON COLUMN exam_task_manager.build_type IS 'ç»„å·æ–¹å¼';
+COMMENT ON COLUMN exam_task_manager.force_done IS 'å¼ºåˆ¶æŠ½å·';
+COMMENT ON COLUMN exam_task_manager.exam_bank IS 'è€ƒè¯•é¢˜åº“';
+COMMENT ON COLUMN exam_task_manager.exam_bank_text IS 'è€ƒè¯•é¢˜åº“æ–‡å­—';
+COMMENT ON COLUMN exam_task_manager.picture_url IS 'å›¾ç‰‡é“¾æ¥';
+COMMENT ON COLUMN exam_task_manager.start_time IS 'å¼€å§‹æ—¶é—´';
+COMMENT ON COLUMN exam_task_manager.end_time IS 'ç»“æŸæ—¶é—´';
+COMMENT ON COLUMN exam_task_manager.exam_duration IS 'è€ƒè¯•æ—¶é•¿';
+COMMENT ON COLUMN exam_task_manager.status IS 'çŠ¶æ€';
+COMMENT ON COLUMN exam_task_manager.create_by IS 'åˆ›å»ºè€…';
+COMMENT ON COLUMN exam_task_manager.create_dept IS 'åˆ›å»ºéƒ¨é—¨';
+COMMENT ON COLUMN exam_task_manager.create_time IS 'åˆ›å»ºæ—¶é—´';
 
 create table exam_task_picture
 (
@@ -848,15 +848,15 @@ status Int null,
 constraint PK_exam_task_picture  primary key (photo_code)
 );
 
-COMMENT ON COLUMN exam_task_picture.photo_id IS 'Í¼Æ¬ĞòºÅ';
-COMMENT ON COLUMN exam_task_picture.photo_code IS 'Í¼Æ¬´úÂë';
-COMMENT ON COLUMN exam_task_picture.photo_path IS 'ÎÄµµ´úÂë';
-COMMENT ON COLUMN exam_task_picture.photo_url IS 'Í¼Æ¬Á´½Ó';
-COMMENT ON COLUMN exam_task_picture.file_name IS 'ÎÄ¼şÃû³Æ';
-COMMENT ON COLUMN exam_task_picture.original_name IS 'Ô­Ê¼Ãû³Æ';
-COMMENT ON COLUMN exam_task_picture.create_by IS '´´½¨Õß';
-COMMENT ON COLUMN exam_task_picture.create_time IS '´´½¨Ê±¼ä';
-COMMENT ON COLUMN exam_task_picture.status IS '×´Ì¬';
+COMMENT ON COLUMN exam_task_picture.photo_id IS 'å›¾ç‰‡åºå·';
+COMMENT ON COLUMN exam_task_picture.photo_code IS 'å›¾ç‰‡ä»£ç ';
+COMMENT ON COLUMN exam_task_picture.photo_path IS 'æ–‡æ¡£ä»£ç ';
+COMMENT ON COLUMN exam_task_picture.photo_url IS 'å›¾ç‰‡é“¾æ¥';
+COMMENT ON COLUMN exam_task_picture.file_name IS 'æ–‡ä»¶åç§°';
+COMMENT ON COLUMN exam_task_picture.original_name IS 'åŸå§‹åç§°';
+COMMENT ON COLUMN exam_task_picture.create_by IS 'åˆ›å»ºè€…';
+COMMENT ON COLUMN exam_task_picture.create_time IS 'åˆ›å»ºæ—¶é—´';
+COMMENT ON COLUMN exam_task_picture.status IS 'çŠ¶æ€';
 
 create table exam_task_questions
 (
@@ -867,9 +867,9 @@ constraint PK_exam_task_questions  primary key (exam_code, questions_code)
 );
 
 
-COMMENT ON COLUMN exam_task_questions.exam_code IS '¿¼ÊÔ´úÂë';
-COMMENT ON COLUMN exam_task_questions.questions_code IS 'ÌâÄ¿´úÂë';
-COMMENT ON COLUMN exam_task_questions.questions_number IS 'ÌâºÅ';
+COMMENT ON COLUMN exam_task_questions.exam_code IS 'è€ƒè¯•ä»£ç ';
+COMMENT ON COLUMN exam_task_questions.questions_code IS 'é¢˜ç›®ä»£ç ';
+COMMENT ON COLUMN exam_task_questions.questions_number IS 'é¢˜å·';
 
 
 create table exam_task_group
@@ -881,9 +881,9 @@ constraint PK_exam_task_group  primary key (exam_code, group_code)
 );
 
 
-COMMENT ON COLUMN exam_task_group.exam_code IS '¿¼ÊÔ´úÂë';
-COMMENT ON COLUMN exam_task_group.group_code IS '·Ö×é´úÂë';
-COMMENT ON COLUMN exam_task_group.order_id IS 'ÅÅĞò±àºÅ';
+COMMENT ON COLUMN exam_task_group.exam_code IS 'è€ƒè¯•ä»£ç ';
+COMMENT ON COLUMN exam_task_group.group_code IS 'åˆ†ç»„ä»£ç ';
+COMMENT ON COLUMN exam_task_group.order_id IS 'æ’åºç¼–å·';
 
 
 create table exam_task_person
@@ -898,12 +898,12 @@ constraint PK_exam_task_person  primary key (exam_code,user_code)
 );
 
 
-COMMENT ON COLUMN exam_task_person.exam_code IS '¿¼ÊÔ´úÂë';
-COMMENT ON COLUMN exam_task_person.user_code IS '¿¼ÊÔÈËÔ±';
-COMMENT ON COLUMN exam_task_person.task_code IS 'ÈÎÎñ´úÂë';
-COMMENT ON COLUMN exam_task_person.start_time IS '¿ªÊ¼Ê±¼ä';
-COMMENT ON COLUMN exam_task_person.end_time IS '½áÊøÊ±¼ä';
-COMMENT ON COLUMN exam_task_person.status IS '×´Ì¬';
+COMMENT ON COLUMN exam_task_person.exam_code IS 'è€ƒè¯•ä»£ç ';
+COMMENT ON COLUMN exam_task_person.user_code IS 'è€ƒè¯•äººå‘˜';
+COMMENT ON COLUMN exam_task_person.task_code IS 'ä»»åŠ¡ä»£ç ';
+COMMENT ON COLUMN exam_task_person.start_time IS 'å¼€å§‹æ—¶é—´';
+COMMENT ON COLUMN exam_task_person.end_time IS 'ç»“æŸæ—¶é—´';
+COMMENT ON COLUMN exam_task_person.status IS 'çŠ¶æ€';
 
 create table exam_user_score
 (
@@ -921,16 +921,16 @@ constraint PK_exam_user_score  primary key (exam_code,user_code)
 );
 
 
-COMMENT ON COLUMN exam_user_score.exam_code IS '¿¼ÊÔ´úÂë';
-COMMENT ON COLUMN exam_user_score.user_code IS '¿¼ÊÔÈËÔ±';
-COMMENT ON COLUMN exam_user_score.start_time IS '¿ªÊ¼Ê±¼ä';
-COMMENT ON COLUMN exam_user_score.end_time IS '½áÊøÊ±¼ä';
-COMMENT ON COLUMN exam_user_score.questions_score IS 'ÌâÄ¿·ÖÊı';
-COMMENT ON COLUMN exam_user_score.exam_score IS '·ÖÊı';
-COMMENT ON COLUMN exam_user_score.exam_number IS 'ÌâÄ¿Êı';
-COMMENT ON COLUMN exam_user_score.answered_number IS '´ğÌâÊı';
-COMMENT ON COLUMN exam_user_score.not_answered IS 'Î´´ğÌâÊı';
-COMMENT ON COLUMN exam_user_score.status IS '×´Ì¬';
+COMMENT ON COLUMN exam_user_score.exam_code IS 'è€ƒè¯•ä»£ç ';
+COMMENT ON COLUMN exam_user_score.user_code IS 'è€ƒè¯•äººå‘˜';
+COMMENT ON COLUMN exam_user_score.start_time IS 'å¼€å§‹æ—¶é—´';
+COMMENT ON COLUMN exam_user_score.end_time IS 'ç»“æŸæ—¶é—´';
+COMMENT ON COLUMN exam_user_score.questions_score IS 'é¢˜ç›®åˆ†æ•°';
+COMMENT ON COLUMN exam_user_score.exam_score IS 'åˆ†æ•°';
+COMMENT ON COLUMN exam_user_score.exam_number IS 'é¢˜ç›®æ•°';
+COMMENT ON COLUMN exam_user_score.answered_number IS 'ç­”é¢˜æ•°';
+COMMENT ON COLUMN exam_user_score.not_answered IS 'æœªç­”é¢˜æ•°';
+COMMENT ON COLUMN exam_user_score.status IS 'çŠ¶æ€';
 
 
 create table exam_task_answer
@@ -947,14 +947,14 @@ constraint PK_exam_task_answer  primary key (exam_code, questions_code, user_cod
 );
 
 
-COMMENT ON COLUMN exam_task_answer.exam_code IS '¿¼ÊÔ´úÂë';
-COMMENT ON COLUMN exam_task_answer.user_code IS '¿¼ÊÔÓÃ»§';
-COMMENT ON COLUMN exam_task_answer.questions_code IS 'ÌâÄ¿´úÂë';
-COMMENT ON COLUMN exam_task_answer.questions_number IS 'ÌâºÅ';
-COMMENT ON COLUMN exam_task_answer.questions_type IS 'ÊÔÌâÀàĞÍ';
-COMMENT ON COLUMN exam_task_answer.questions_answer IS 'ÌâÄ¿»Ø´ğ';
-COMMENT ON COLUMN exam_task_answer.is_mark IS 'ÊÇ·ñ±ê¼Ç';
-COMMENT ON COLUMN exam_task_answer.is_current IS 'ÊÇ·ñµ±Ç°';
+COMMENT ON COLUMN exam_task_answer.exam_code IS 'è€ƒè¯•ä»£ç ';
+COMMENT ON COLUMN exam_task_answer.user_code IS 'è€ƒè¯•ç”¨æˆ·';
+COMMENT ON COLUMN exam_task_answer.questions_code IS 'é¢˜ç›®ä»£ç ';
+COMMENT ON COLUMN exam_task_answer.questions_number IS 'é¢˜å·';
+COMMENT ON COLUMN exam_task_answer.questions_type IS 'è¯•é¢˜ç±»å‹';
+COMMENT ON COLUMN exam_task_answer.questions_answer IS 'é¢˜ç›®å›ç­”';
+COMMENT ON COLUMN exam_task_answer.is_mark IS 'æ˜¯å¦æ ‡è®°';
+COMMENT ON COLUMN exam_task_answer.is_current IS 'æ˜¯å¦å½“å‰';
 
 create table exam_finish_answer
 (
@@ -969,13 +969,13 @@ constraint PK_exam_finish_answer  primary key (exam_code, questions_code, user_c
 );
 
 
-COMMENT ON COLUMN exam_finish_answer.exam_code IS '¿¼ÊÔ´úÂë';
-COMMENT ON COLUMN exam_finish_answer.user_code IS '¿¼ÊÔÓÃ»§';
-COMMENT ON COLUMN exam_finish_answer.questions_code IS 'ÌâÄ¿´úÂë';
-COMMENT ON COLUMN exam_finish_answer. exam_score IS '·ÖÊı';
-COMMENT ON COLUMN exam_finish_answer.right_answer IS 'ÕıÈ·´ğ°¸';
-COMMENT ON COLUMN exam_finish_answer.questions_answer IS 'ÌâÄ¿»Ø´ğ';
-COMMENT ON COLUMN exam_finish_answer.questions_score IS 'ÌâÄ¿µÃ·Ö';
+COMMENT ON COLUMN exam_finish_answer.exam_code IS 'è€ƒè¯•ä»£ç ';
+COMMENT ON COLUMN exam_finish_answer.user_code IS 'è€ƒè¯•ç”¨æˆ·';
+COMMENT ON COLUMN exam_finish_answer.questions_code IS 'é¢˜ç›®ä»£ç ';
+COMMENT ON COLUMN exam_finish_answer. exam_score IS 'åˆ†æ•°';
+COMMENT ON COLUMN exam_finish_answer.right_answer IS 'æ­£ç¡®ç­”æ¡ˆ';
+COMMENT ON COLUMN exam_finish_answer.questions_answer IS 'é¢˜ç›®å›ç­”';
+COMMENT ON COLUMN exam_finish_answer.questions_score IS 'é¢˜ç›®å¾—åˆ†';
 
 
 

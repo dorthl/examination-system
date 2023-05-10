@@ -1,303 +1,303 @@
--- Ô¤ÖÃÊı¾İ¿ÉÒÔ¶à´ÎÑ¡ÖĞµ¼Èë
+ï»¿-- é¢„ç½®æ•°æ®å¯ä»¥å¤šæ¬¡é€‰ä¸­å¯¼å…¥
 -- ----------------------------
--- ³õÊ¼»¯-²¿ÃÅ±íÊı¾İ
+-- åˆå§‹åŒ–-éƒ¨é—¨è¡¨æ•°æ®
 -- ----------------------------
-insert into sys_dept(dept_id,parent_id,ancestors,dept_code,dept_name,order_num,leader,phone,email,status,del_flag,create_by,create_time) values (100,0,'0','5301001','²âÊÔÓÃµ¥Î»',0,'','13512345678','','0','0','admin',sysdate);
+insert into sys_dept(dept_id,parent_id,ancestors,dept_code,dept_name,order_num,leader,phone,email,status,del_flag,create_by,create_time) values (100,0,'0','5301001','æµ‹è¯•ç”¨å•ä½',0,'','13512345678','','0','0','admin',sysdate);
 
 -- ----------------------------
--- ³õÊ¼»¯-ÓÃ»§ĞÅÏ¢±íÊı¾İ
+-- åˆå§‹åŒ–-ç”¨æˆ·ä¿¡æ¯è¡¨æ•°æ®
 -- ----------------------------
 insert into SYS_USER (user_id, user_code, dept_id, user_name, nick_name, user_type, email, phonenumber, sex, avatar, password, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark)
-values (2, '40288b0186e867550186e867559d0000', 100, 'user1', 'ÓÃ»§Ò»', null, null, '13654128596', null, null, '$2a$10$aqSRTGVSqrZFwp.s5JXic.5JtZDYFq.19hriwW7seEdPGo6SJu3.W', '0', '0', '127.0.0.1', to_date('16-03-2023 11:16:56', 'dd-mm-yyyy hh24:mi:ss'), 'admin', to_date('16-03-2023 11:11:57', 'dd-mm-yyyy hh24:mi:ss'), null, to_date('16-03-2023 11:16:42', 'dd-mm-yyyy hh24:mi:ss'), null);
+values (2, '40288b0186e867550186e867559d0000', 100, 'user1', 'ç”¨æˆ·ä¸€', null, null, '13654128596', null, null, '$2a$10$aqSRTGVSqrZFwp.s5JXic.5JtZDYFq.19hriwW7seEdPGo6SJu3.W', '0', '0', '127.0.0.1', to_date('16-03-2023 11:16:56', 'dd-mm-yyyy hh24:mi:ss'), 'admin', to_date('16-03-2023 11:11:57', 'dd-mm-yyyy hh24:mi:ss'), null, to_date('16-03-2023 11:16:42', 'dd-mm-yyyy hh24:mi:ss'), null);
 insert into SYS_USER (user_id, user_code, dept_id, user_name, nick_name, user_type, email, phonenumber, sex, avatar, password, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark)
-values (3, '40288b0186e867550186e86911cc0001', 100, 'user2', 'ÓÃ»§¶ş', null, null, '13698568741', null, null, '$2a$10$Sh3WZ3ozH8Q88oG7mla.jerm3f3rCaq0QzD1KEPXXFrzcay0Hgz.S', '0', '0', null, null, 'admin', to_date('16-03-2023 11:13:51', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (3, '40288b0186e867550186e86911cc0001', 100, 'user2', 'ç”¨æˆ·äºŒ', null, null, '13698568741', null, null, '$2a$10$Sh3WZ3ozH8Q88oG7mla.jerm3f3rCaq0QzD1KEPXXFrzcay0Hgz.S', '0', '0', null, null, 'admin', to_date('16-03-2023 11:13:51', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_USER (user_id, user_code, dept_id, user_name, nick_name, user_type, email, phonenumber, sex, avatar, password, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark)
-values (1, 'F6FFFC4E3A50062DE0534479C80A75C1', 100, 'admin', 'ÏµÍ³¹ÜÀíÔ±', '00', 'abc@qq.com', '13512345678', '0', null, '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', '0', '0', '127.0.0.1', to_date('16-03-2023 11:19:58', 'dd-mm-yyyy hh24:mi:ss'), 'admin', null, null, to_date('16-03-2023 11:19:44', 'dd-mm-yyyy hh24:mi:ss'), null);
+values (1, 'F6FFFC4E3A50062DE0534479C80A75C1', 100, 'admin', 'ç³»ç»Ÿç®¡ç†å‘˜', '00', 'abc@qq.com', '13512345678', '0', null, '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', '0', '0', '127.0.0.1', to_date('16-03-2023 11:19:58', 'dd-mm-yyyy hh24:mi:ss'), 'admin', null, null, to_date('16-03-2023 11:19:44', 'dd-mm-yyyy hh24:mi:ss'), null);
 
--- ³õÊ¼»¯-¸ÚÎ»ĞÅÏ¢±íÊı¾İ
+-- åˆå§‹åŒ–-å²—ä½ä¿¡æ¯è¡¨æ•°æ®
 -- ----------------------------
-insert into sys_post (post_id,post_code,post_name,post_sort,status,del_flag,create_by,create_time) values(1, 'ceo',  '¶­ÊÂ³¤',    1, '0',  '0','admin', sysdate);
+insert into sys_post (post_id,post_code,post_name,post_sort,status,del_flag,create_by,create_time) values(1, 'ceo',  'è‘£äº‹é•¿',    1, '0',  '0','admin', sysdate);
 
 -- ----------------------------
--- ³õÊ¼»¯-½ÇÉ«ĞÅÏ¢±íÊı¾İ
+-- åˆå§‹åŒ–-è§’è‰²ä¿¡æ¯è¡¨æ•°æ®
 -- ----------------------------
 insert into SYS_ROLE (role_id, role_name, role_key, role_sort, data_scope, menu_check_strictly, dept_check_strictly, status, del_flag, create_by, create_time, update_by, update_time, remark)
-values (2, 'Ñ§Ô±', 'student', 2, null, 1, 1, '0', '0', 'admin', to_date('16-03-2023 11:01:28', 'dd-mm-yyyy hh24:mi:ss'), 'admin', to_date('16-03-2023 11:16:25', 'dd-mm-yyyy hh24:mi:ss'), null);
+values (2, 'å­¦å‘˜', 'student', 2, null, 1, 1, '0', '0', 'admin', to_date('16-03-2023 11:01:28', 'dd-mm-yyyy hh24:mi:ss'), 'admin', to_date('16-03-2023 11:16:25', 'dd-mm-yyyy hh24:mi:ss'), null);
 insert into SYS_ROLE (role_id, role_name, role_key, role_sort, data_scope, menu_check_strictly, dept_check_strictly, status, del_flag, create_by, create_time, update_by, update_time, remark)
-values (1, '³¬¼¶¹ÜÀíÔ±', 'admin', 1, '1', 1, 1, '0', '0', 'admin', to_date('16-03-2023 10:31:19', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1, 'è¶…çº§ç®¡ç†å‘˜', 'admin', 1, '1', 1, 1, '0', '0', 'admin', to_date('16-03-2023 10:31:19', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 commit;
 
 
 -- ----------------------------
--- ³õÊ¼»¯-²Ëµ¥ĞÅÏ¢±íÊı¾İ
+-- åˆå§‹åŒ–-èœå•ä¿¡æ¯è¡¨æ•°æ®
 -- ----------------------------
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1, 'ÏµÍ³¹ÜÀí', 0, 1, 'system', null, 1, 0, 'M', '0', '0', '0', null, 'system', 'admin', null, null, null, 'ÏµÍ³¹ÜÀíÄ¿Â¼');
+values (1, 'ç³»ç»Ÿç®¡ç†', 0, 1, 'system', null, 1, 0, 'M', '0', '0', '0', null, 'system', 'admin', null, null, null, 'ç³»ç»Ÿç®¡ç†ç›®å½•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (2, 'ÏµÍ³¼à¿Ø', 0, 3, 'monitor', null, 1, 0, 'M', '0', '0', '0', null, 'monitor', 'admin', null, null, null, 'ÏµÍ³¼à¿ØÄ¿Â¼');
+values (2, 'ç³»ç»Ÿç›‘æ§', 0, 3, 'monitor', null, 1, 0, 'M', '0', '0', '0', null, 'monitor', 'admin', null, null, null, 'ç³»ç»Ÿç›‘æ§ç›®å½•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (3, 'ÏµÍ³¹¤¾ß', 0, 4, 'tool', null, 1, 0, 'M', '0', '0', '0', null, 'tool', 'admin', null, null, null, 'ÏµÍ³¹¤¾ßÄ¿Â¼');
+values (3, 'ç³»ç»Ÿå·¥å…·', 0, 4, 'tool', null, 1, 0, 'M', '0', '0', '0', null, 'tool', 'admin', null, null, null, 'ç³»ç»Ÿå·¥å…·ç›®å½•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (8, '×ÊÁÏ¹ÜÀí', 0, 8, 'fms', null, 1, 0, 'M', '0', '0', '0', null, 'files', 'admin', null, null, null, 'ÎÄ¼ş¹ÜÀíÄ¿Â¼');
+values (8, 'èµ„æ–™ç®¡ç†', 0, 8, 'fms', null, 1, 0, 'M', '0', '0', '0', null, 'files', 'admin', null, null, null, 'æ–‡ä»¶ç®¡ç†ç›®å½•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (9, 'ÊÔÌâ¹ÜÀí', 0, 9, 'questions', null, 1, 0, 'M', '0', '0', '0', null, 'questions', 'admin', null, null, null, 'ÊÔÌâ¹ÜÀíÄ¿Â¼');
+values (9, 'è¯•é¢˜ç®¡ç†', 0, 9, 'questions', null, 1, 0, 'M', '0', '0', '0', null, 'questions', 'admin', null, null, null, 'è¯•é¢˜ç®¡ç†ç›®å½•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (10, '¿¼ÊÔ¹ÜÀí', 0, 10, 'exammanager', null, 1, 0, 'M', '0', '0', '0', null, 'exammanager', 'admin', null, null, null, '¿¼ÊÔ¹ÜÀíÄ¿Â¼');
+values (10, 'è€ƒè¯•ç®¡ç†', 0, 10, 'exammanager', null, 1, 0, 'M', '0', '0', '0', null, 'exammanager', 'admin', null, null, null, 'è€ƒè¯•ç®¡ç†ç›®å½•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (11, 'ÔÚÏß¿¼ÊÔ', 0, 11, 'onlineexam', null, 1, 0, 'M', '0', '0', '0', null, 'onlineexam', 'admin', null, null, null, 'ÔÚÏß¿¼ÊÔÄ¿Â¼');
+values (11, 'åœ¨çº¿è€ƒè¯•', 0, 11, 'onlineexam', null, 1, 0, 'M', '0', '0', '0', null, 'onlineexam', 'admin', null, null, null, 'åœ¨çº¿è€ƒè¯•ç›®å½•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (100, 'ÓÃ»§¹ÜÀí', 1, 1, 'user', 'system/user/index', 1, 0, 'C', '0', '0', '0', 'system:user:list', 'user', 'admin', null, null, null, 'ÓÃ»§¹ÜÀí²Ëµ¥');
+values (100, 'ç”¨æˆ·ç®¡ç†', 1, 1, 'user', 'system/user/index', 1, 0, 'C', '0', '0', '0', 'system:user:list', 'user', 'admin', null, null, null, 'ç”¨æˆ·ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (101, '½ÇÉ«¹ÜÀí', 1, 2, 'role', 'system/role/index', 1, 0, 'C', '0', '0', '0', 'system:role:list', 'peoples', 'admin', null, null, null, '½ÇÉ«¹ÜÀí²Ëµ¥');
+values (101, 'è§’è‰²ç®¡ç†', 1, 2, 'role', 'system/role/index', 1, 0, 'C', '0', '0', '0', 'system:role:list', 'peoples', 'admin', null, null, null, 'è§’è‰²ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (102, '²Ëµ¥¹ÜÀí', 1, 3, 'menu', 'system/menu/index', 1, 0, 'C', '0', '0', '0', 'system:menu:list', 'tree-table', 'admin', null, null, null, '²Ëµ¥¹ÜÀí²Ëµ¥');
+values (102, 'èœå•ç®¡ç†', 1, 3, 'menu', 'system/menu/index', 1, 0, 'C', '0', '0', '0', 'system:menu:list', 'tree-table', 'admin', null, null, null, 'èœå•ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (103, '²¿ÃÅ¹ÜÀí', 1, 4, 'dept', 'system/dept/index', 1, 0, 'C', '0', '0', '0', 'system:dept:list', 'tree', 'admin', null, null, null, '²¿ÃÅ¹ÜÀí²Ëµ¥');
+values (103, 'éƒ¨é—¨ç®¡ç†', 1, 4, 'dept', 'system/dept/index', 1, 0, 'C', '0', '0', '0', 'system:dept:list', 'tree', 'admin', null, null, null, 'éƒ¨é—¨ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (104, '¸ÚÎ»¹ÜÀí', 1, 5, 'post', 'system/post/index', 1, 0, 'C', '0', '0', '0', 'system:post:list', 'post', 'admin', null, null, null, '¸ÚÎ»¹ÜÀí²Ëµ¥');
+values (104, 'å²—ä½ç®¡ç†', 1, 5, 'post', 'system/post/index', 1, 0, 'C', '0', '0', '0', 'system:post:list', 'post', 'admin', null, null, null, 'å²—ä½ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (105, '×Öµä¹ÜÀí', 1, 6, 'dict', 'system/dict/index', 1, 0, 'C', '0', '0', '0', 'system:dict:list', 'dict', 'admin', null, null, null, '×Öµä¹ÜÀí²Ëµ¥');
+values (105, 'å­—å…¸ç®¡ç†', 1, 6, 'dict', 'system/dict/index', 1, 0, 'C', '0', '0', '0', 'system:dict:list', 'dict', 'admin', null, null, null, 'å­—å…¸ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (106, '²ÎÊıÉèÖÃ', 1, 7, 'config', 'system/config/index', 1, 0, 'C', '0', '0', '0', 'system:config:list', 'edit', 'admin', null, null, null, '²ÎÊıÉèÖÃ²Ëµ¥');
+values (106, 'å‚æ•°è®¾ç½®', 1, 7, 'config', 'system/config/index', 1, 0, 'C', '0', '0', '0', 'system:config:list', 'edit', 'admin', null, null, null, 'å‚æ•°è®¾ç½®èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (107, 'Í¨Öª¹«¸æ', 1, 8, 'notice', 'system/notice/index', 1, 0, 'C', '0', '0', '0', 'system:notice:list', 'message', 'admin', null, null, null, 'Í¨Öª¹«¸æ²Ëµ¥');
+values (107, 'é€šçŸ¥å…¬å‘Š', 1, 8, 'notice', 'system/notice/index', 1, 0, 'C', '0', '0', '0', 'system:notice:list', 'message', 'admin', null, null, null, 'é€šçŸ¥å…¬å‘Šèœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (108, 'ÈÕÖ¾¹ÜÀí', 1, 9, 'log', null, 1, 0, 'M', '0', '0', '0', null, 'log', 'admin', null, null, null, 'ÈÕÖ¾¹ÜÀí²Ëµ¥');
+values (108, 'æ—¥å¿—ç®¡ç†', 1, 9, 'log', null, 1, 0, 'M', '0', '0', '0', null, 'log', 'admin', null, null, null, 'æ—¥å¿—ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (109, 'ÔÚÏßÓÃ»§', 2, 1, 'online', 'monitor/online/index', 1, 0, 'C', '0', '0', '0', 'monitor:online:list', 'online', 'admin', null, null, null, 'ÔÚÏßÓÃ»§²Ëµ¥');
+values (109, 'åœ¨çº¿ç”¨æˆ·', 2, 1, 'online', 'monitor/online/index', 1, 0, 'C', '0', '0', '0', 'monitor:online:list', 'online', 'admin', null, null, null, 'åœ¨çº¿ç”¨æˆ·èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (110, '¶¨Ê±ÈÎÎñ', 2, 2, 'job', 'monitor/job/index', 1, 0, 'C', '0', '0', '0', 'monitor:job:list', 'job', 'admin', null, null, null, '¶¨Ê±ÈÎÎñ²Ëµ¥');
+values (110, 'å®šæ—¶ä»»åŠ¡', 2, 2, 'job', 'monitor/job/index', 1, 0, 'C', '0', '0', '0', 'monitor:job:list', 'job', 'admin', null, null, null, 'å®šæ—¶ä»»åŠ¡èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (111, 'Êı¾İ¼à¿Ø', 2, 3, 'druid', 'monitor/druid/index', 1, 0, 'C', '0', '0', '0', 'monitor:druid:list', 'druid', 'admin', null, null, null, 'Êı¾İ¼à¿Ø²Ëµ¥');
+values (111, 'æ•°æ®ç›‘æ§', 2, 3, 'druid', 'monitor/druid/index', 1, 0, 'C', '0', '0', '0', 'monitor:druid:list', 'druid', 'admin', null, null, null, 'æ•°æ®ç›‘æ§èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (112, '·şÎñ¼à¿Ø', 2, 4, 'server', 'monitor/server/index', 1, 0, 'C', '0', '0', '0', 'monitor:server:list', 'server', 'admin', null, null, null, '·şÎñ¼à¿Ø²Ëµ¥');
+values (112, 'æœåŠ¡ç›‘æ§', 2, 4, 'server', 'monitor/server/index', 1, 0, 'C', '0', '0', '0', 'monitor:server:list', 'server', 'admin', null, null, null, 'æœåŠ¡ç›‘æ§èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (113, '»º´æ¼à¿Ø', 2, 5, 'cache', 'monitor/cache/index', 1, 0, 'C', '0', '0', '0', 'monitor:cache:list', 'redis', 'admin', null, null, null, '»º´æ¼à¿Ø²Ëµ¥');
+values (113, 'ç¼“å­˜ç›‘æ§', 2, 5, 'cache', 'monitor/cache/index', 1, 0, 'C', '0', '0', '0', 'monitor:cache:list', 'redis', 'admin', null, null, null, 'ç¼“å­˜ç›‘æ§èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (114, '±íµ¥¹¹½¨', 3, 1, 'build', 'tool/build/index', 1, 0, 'C', '0', '0', '0', 'tool:build:list', 'build', 'admin', null, null, null, '±íµ¥¹¹½¨²Ëµ¥');
+values (114, 'è¡¨å•æ„å»º', 3, 1, 'build', 'tool/build/index', 1, 0, 'C', '0', '0', '0', 'tool:build:list', 'build', 'admin', null, null, null, 'è¡¨å•æ„å»ºèœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (115, '´úÂëÉú³É', 3, 2, 'gen', 'tool/gen/index', 1, 0, 'C', '0', '0', '0', 'tool:gen:list', 'code', 'admin', null, null, null, '´úÂëÉú³É²Ëµ¥');
+values (115, 'ä»£ç ç”Ÿæˆ', 3, 2, 'gen', 'tool/gen/index', 1, 0, 'C', '0', '0', '0', 'tool:gen:list', 'code', 'admin', null, null, null, 'ä»£ç ç”Ÿæˆèœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (116, 'ÏµÍ³½Ó¿Ú', 3, 3, 'swagger', 'tool/swagger/index', 1, 0, 'C', '0', '0', '0', 'tool:swagger:list', 'swagger', 'admin', null, null, null, 'ÏµÍ³½Ó¿Ú²Ëµ¥');
+values (116, 'ç³»ç»Ÿæ¥å£', 3, 3, 'swagger', 'tool/swagger/index', 1, 0, 'C', '0', '0', '0', 'tool:swagger:list', 'swagger', 'admin', null, null, null, 'ç³»ç»Ÿæ¥å£èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (121, 'ÈËÔ±·Ö×é', 1, 11, 'group', 'system/group/index', 1, 0, 'C', '0', '0', null, 'system:group:list', 'group', 'admin', to_date('28-01-2023 19:40:40', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'ÈËÔ±·Ö×é²Ëµ¥');
+values (121, 'äººå‘˜åˆ†ç»„', 1, 11, 'group', 'system/group/index', 1, 0, 'C', '0', '0', null, 'system:group:list', 'group', 'admin', to_date('28-01-2023 19:40:40', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'äººå‘˜åˆ†ç»„èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (220, '²Ù×÷ÈÕÖ¾', 108, 1, 'operlog', 'monitor/operlog/index', 1, 0, 'C', '0', '0', '0', 'monitor:operlog:list', 'form', 'admin', null, null, null, '²Ù×÷ÈÕÖ¾²Ëµ¥');
+values (220, 'æ“ä½œæ—¥å¿—', 108, 1, 'operlog', 'monitor/operlog/index', 1, 0, 'C', '0', '0', '0', 'monitor:operlog:list', 'form', 'admin', null, null, null, 'æ“ä½œæ—¥å¿—èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (230, 'µÇÂ¼ÈÕÖ¾', 108, 2, 'logininfor', 'monitor/logininfor/index', 1, 0, 'C', '0', '0', '0', 'monitor:logininfor:list', 'logininfor', 'admin', null, null, null, 'µÇÂ¼ÈÕÖ¾²Ëµ¥');
+values (230, 'ç™»å½•æ—¥å¿—', 108, 2, 'logininfor', 'monitor/logininfor/index', 1, 0, 'C', '0', '0', '0', 'monitor:logininfor:list', 'logininfor', 'admin', null, null, null, 'ç™»å½•æ—¥å¿—èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (300, 'Í¼Æ¬¹ÜÀí', 8, 1, 'photo', 'fms/photo/index', 1, 0, 'C', '0', '0', null, 'fms:photo:list', 'photo', 'admin', to_date('14-12-2021 15:24:20', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'Í¼Æ¬¹ÜÀí²Ëµ¥');
+values (300, 'å›¾ç‰‡ç®¡ç†', 8, 1, 'photo', 'fms/photo/index', 1, 0, 'C', '0', '0', null, 'fms:photo:list', 'photo', 'admin', to_date('14-12-2021 15:24:20', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'å›¾ç‰‡ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (305, 'ÎÄ¼ş¹ÜÀí', 8, 1, 'files', 'fms/files/index', 1, 0, 'C', '0', '0', null, 'fms:files:list', 'film', 'admin', to_date('17-12-2021 23:15:50', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'ÎÄ¼ş¹ÜÀí²Ëµ¥');
+values (305, 'æ–‡ä»¶ç®¡ç†', 8, 1, 'files', 'fms/files/index', 1, 0, 'C', '0', '0', null, 'fms:files:list', 'film', 'admin', to_date('17-12-2021 23:15:50', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'æ–‡ä»¶ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (320, 'Ìâ¿â·ÖÀà', 9, 1, 'examtype', 'questions/examtype/index', 1, 0, 'C', '0', '0', null, 'questions:examtype:list', 'examtype', 'admin', to_date('14-12-2022 14:28:22', 'dd-mm-yyyy hh24:mi:ss'), null, null, '¿¼ÊÔ·ÖÀà²Ëµ¥');
+values (320, 'é¢˜åº“åˆ†ç±»', 9, 1, 'examtype', 'questions/examtype/index', 1, 0, 'C', '0', '0', null, 'questions:examtype:list', 'examtype', 'admin', to_date('14-12-2022 14:28:22', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'è€ƒè¯•åˆ†ç±»èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (325, 'Ìâ¿âÉèÖÃ', 9, 2, 'questionsbank', 'questions/questionsbank/index', 1, 0, 'C', '0', '0', null, 'questions:questionsbank:list', 'questionsbank', 'admin', to_date('19-12-2022 14:10:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'Ìâ¿â¹ÜÀí²Ëµ¥');
+values (325, 'é¢˜åº“è®¾ç½®', 9, 2, 'questionsbank', 'questions/questionsbank/index', 1, 0, 'C', '0', '0', null, 'questions:questionsbank:list', 'questionsbank', 'admin', to_date('19-12-2022 14:10:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'é¢˜åº“ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (330, '¿¼ÊÔÌâÄ¿¹ÜÀí', 9, 5, 'examquestions', 'questions/examquestions/index', 1, 0, 'C', '0', '0', null, 'questions:examquestions:list', 'examquestions', 'admin', to_date('27-12-2022 20:08:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, '¿¼ÊÔÌâÄ¿¹ÜÀí²Ëµ¥');
+values (330, 'è€ƒè¯•é¢˜ç›®ç®¡ç†', 9, 5, 'examquestions', 'questions/examquestions/index', 1, 0, 'C', '0', '0', null, 'questions:examquestions:list', 'examquestions', 'admin', to_date('27-12-2022 20:08:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'è€ƒè¯•é¢˜ç›®ç®¡ç†èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (350, '´´½¨¿¼ÊÔ', 10, 1, 'examtask', 'exam/examtask/index', 1, 0, 'C', '0', '0', null, 'exam:examtask:list', 'examtask', 'admin', to_date('06-01-2023 13:53:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, '´´½¨¿¼ÊÔ²Ëµ¥');
+values (350, 'åˆ›å»ºè€ƒè¯•', 10, 1, 'examtask', 'exam/examtask/index', 1, 0, 'C', '0', '0', null, 'exam:examtask:list', 'examtask', 'admin', to_date('06-01-2023 13:53:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'åˆ›å»ºè€ƒè¯•èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (360, '¿ªÊ¼¿¼ÊÔ', 11, 1, 'examstart', 'onlineexam/examstart/index', 1, 0, 'C', '0', '0', null, 'onlineexam:data:list', 'examstart', 'admin', to_date('06-01-2023 13:53:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, '¿ªÊ¼¿¼ÊÔ²Ëµ¥');
+values (360, 'å¼€å§‹è€ƒè¯•', 11, 1, 'examstart', 'onlineexam/examstart/index', 1, 0, 'C', '0', '0', null, 'onlineexam:data:list', 'examstart', 'admin', to_date('06-01-2023 13:53:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, 'å¼€å§‹è€ƒè¯•èœå•');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1001, 'ÓÃ»§²éÑ¯', 100, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:query', '#', 'admin', null, null, null, null);
+values (1001, 'ç”¨æˆ·æŸ¥è¯¢', 100, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1002, 'ÓÃ»§ĞÂÔö', 100, 2, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:add', '#', 'admin', null, null, null, null);
+values (1002, 'ç”¨æˆ·æ–°å¢', 100, 2, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:add', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1003, 'ÓÃ»§ĞŞ¸Ä', 100, 3, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:edit', '#', 'admin', null, null, null, null);
+values (1003, 'ç”¨æˆ·ä¿®æ”¹', 100, 3, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:edit', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1004, 'ÓÃ»§É¾³ı', 100, 4, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:remove', '#', 'admin', null, null, null, null);
+values (1004, 'ç”¨æˆ·åˆ é™¤', 100, 4, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1005, 'ÓÃ»§µ¼³ö', 100, 5, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:export', '#', 'admin', null, null, null, null);
+values (1005, 'ç”¨æˆ·å¯¼å‡º', 100, 5, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:export', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1006, 'ÓÃ»§µ¼Èë', 100, 6, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:import', '#', 'admin', null, null, null, null);
+values (1006, 'ç”¨æˆ·å¯¼å…¥', 100, 6, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:import', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1007, 'ÖØÖÃÃÜÂë', 100, 7, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:resetPwd', '#', 'admin', null, null, null, null);
+values (1007, 'é‡ç½®å¯†ç ', 100, 7, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:resetPwd', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1008, '½ÇÉ«²éÑ¯', 101, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:role:query', '#', 'admin', null, null, null, null);
+values (1008, 'è§’è‰²æŸ¥è¯¢', 101, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:role:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1009, '½ÇÉ«ĞÂÔö', 101, 2, null, null, 1, 0, 'F', '0', '0', '0', 'system:role:add', '#', 'admin', null, null, null, null);
+values (1009, 'è§’è‰²æ–°å¢', 101, 2, null, null, 1, 0, 'F', '0', '0', '0', 'system:role:add', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1010, '½ÇÉ«ĞŞ¸Ä', 101, 3, null, null, 1, 0, 'F', '0', '0', '0', 'system:role:edit', '#', 'admin', null, null, null, null);
+values (1010, 'è§’è‰²ä¿®æ”¹', 101, 3, null, null, 1, 0, 'F', '0', '0', '0', 'system:role:edit', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1011, '½ÇÉ«É¾³ı', 101, 4, null, null, 1, 0, 'F', '0', '0', '0', 'system:role:remove', '#', 'admin', null, null, null, null);
+values (1011, 'è§’è‰²åˆ é™¤', 101, 4, null, null, 1, 0, 'F', '0', '0', '0', 'system:role:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1012, '½ÇÉ«µ¼³ö', 101, 5, null, null, 1, 0, 'F', '0', '0', '0', 'system:role:export', '#', 'admin', null, null, null, null);
+values (1012, 'è§’è‰²å¯¼å‡º', 101, 5, null, null, 1, 0, 'F', '0', '0', '0', 'system:role:export', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1013, '²Ëµ¥²éÑ¯', 102, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:menu:query', '#', 'admin', null, null, null, null);
+values (1013, 'èœå•æŸ¥è¯¢', 102, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:menu:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1014, '²Ëµ¥ĞÂÔö', 102, 2, null, null, 1, 0, 'F', '0', '0', '0', 'system:menu:add', '#', 'admin', null, null, null, null);
+values (1014, 'èœå•æ–°å¢', 102, 2, null, null, 1, 0, 'F', '0', '0', '0', 'system:menu:add', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1015, '²Ëµ¥ĞŞ¸Ä', 102, 3, null, null, 1, 0, 'F', '0', '0', '0', 'system:menu:edit', '#', 'admin', null, null, null, null);
+values (1015, 'èœå•ä¿®æ”¹', 102, 3, null, null, 1, 0, 'F', '0', '0', '0', 'system:menu:edit', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1016, '²Ëµ¥É¾³ı', 102, 4, null, null, 1, 0, 'F', '0', '0', '0', 'system:menu:remove', '#', 'admin', null, null, null, null);
+values (1016, 'èœå•åˆ é™¤', 102, 4, null, null, 1, 0, 'F', '0', '0', '0', 'system:menu:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1017, '²¿ÃÅ²éÑ¯', 103, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:dept:query', '#', 'admin', null, null, null, null);
+values (1017, 'éƒ¨é—¨æŸ¥è¯¢', 103, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:dept:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1018, '²¿ÃÅĞÂÔö', 103, 2, null, null, 1, 0, 'F', '0', '0', '0', 'system:dept:add', '#', 'admin', null, null, null, null);
+values (1018, 'éƒ¨é—¨æ–°å¢', 103, 2, null, null, 1, 0, 'F', '0', '0', '0', 'system:dept:add', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1019, '²¿ÃÅĞŞ¸Ä', 103, 3, null, null, 1, 0, 'F', '0', '0', '0', 'system:dept:edit', '#', 'admin', null, null, null, null);
+values (1019, 'éƒ¨é—¨ä¿®æ”¹', 103, 3, null, null, 1, 0, 'F', '0', '0', '0', 'system:dept:edit', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1020, '²¿ÃÅÉ¾³ı', 103, 4, null, null, 1, 0, 'F', '0', '0', '0', 'system:dept:remove', '#', 'admin', null, null, null, null);
+values (1020, 'éƒ¨é—¨åˆ é™¤', 103, 4, null, null, 1, 0, 'F', '0', '0', '0', 'system:dept:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1021, '¸ÚÎ»²éÑ¯', 104, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:post:query', '#', 'admin', null, null, null, null);
+values (1021, 'å²—ä½æŸ¥è¯¢', 104, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:post:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1022, '¸ÚÎ»ĞÂÔö', 104, 2, null, null, 1, 0, 'F', '0', '0', '0', 'system:post:add', '#', 'admin', null, null, null, null);
+values (1022, 'å²—ä½æ–°å¢', 104, 2, null, null, 1, 0, 'F', '0', '0', '0', 'system:post:add', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1023, '¸ÚÎ»ĞŞ¸Ä', 104, 3, null, null, 1, 0, 'F', '0', '0', '0', 'system:post:edit', '#', 'admin', null, null, null, null);
+values (1023, 'å²—ä½ä¿®æ”¹', 104, 3, null, null, 1, 0, 'F', '0', '0', '0', 'system:post:edit', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1024, '¸ÚÎ»É¾³ı', 104, 4, null, null, 1, 0, 'F', '0', '0', '0', 'system:post:remove', '#', 'admin', null, null, null, null);
+values (1024, 'å²—ä½åˆ é™¤', 104, 4, null, null, 1, 0, 'F', '0', '0', '0', 'system:post:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1025, '¸ÚÎ»µ¼³ö', 104, 5, null, null, 1, 0, 'F', '0', '0', '0', 'system:post:export', '#', 'admin', null, null, null, null);
+values (1025, 'å²—ä½å¯¼å‡º', 104, 5, null, null, 1, 0, 'F', '0', '0', '0', 'system:post:export', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1026, '×Öµä²éÑ¯', 105, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'system:dict:query', '#', 'admin', null, null, null, null);
+values (1026, 'å­—å…¸æŸ¥è¯¢', 105, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'system:dict:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1027, '×ÖµäĞÂÔö', 105, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'system:dict:add', '#', 'admin', null, null, null, null);
+values (1027, 'å­—å…¸æ–°å¢', 105, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'system:dict:add', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1028, '×ÖµäĞŞ¸Ä', 105, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'system:dict:edit', '#', 'admin', null, null, null, null);
+values (1028, 'å­—å…¸ä¿®æ”¹', 105, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'system:dict:edit', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1029, '×ÖµäÉ¾³ı', 105, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'system:dict:remove', '#', 'admin', null, null, null, null);
+values (1029, 'å­—å…¸åˆ é™¤', 105, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'system:dict:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1030, '×Öµäµ¼³ö', 105, 5, '#', null, 1, 0, 'F', '0', '0', '0', 'system:dict:export', '#', 'admin', null, null, null, null);
+values (1030, 'å­—å…¸å¯¼å‡º', 105, 5, '#', null, 1, 0, 'F', '0', '0', '0', 'system:dict:export', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1031, '²ÎÊı²éÑ¯', 106, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'system:config:query', '#', 'admin', null, null, null, null);
+values (1031, 'å‚æ•°æŸ¥è¯¢', 106, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'system:config:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1032, '²ÎÊıĞÂÔö', 106, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'system:config:add', '#', 'admin', null, null, null, null);
+values (1032, 'å‚æ•°æ–°å¢', 106, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'system:config:add', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1033, '²ÎÊıĞŞ¸Ä', 106, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'system:config:edit', '#', 'admin', null, null, null, null);
+values (1033, 'å‚æ•°ä¿®æ”¹', 106, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'system:config:edit', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1034, '²ÎÊıÉ¾³ı', 106, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'system:config:remove', '#', 'admin', null, null, null, null);
+values (1034, 'å‚æ•°åˆ é™¤', 106, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'system:config:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1035, '²ÎÊıµ¼³ö', 106, 5, '#', null, 1, 0, 'F', '0', '0', '0', 'system:config:export', '#', 'admin', null, null, null, null);
+values (1035, 'å‚æ•°å¯¼å‡º', 106, 5, '#', null, 1, 0, 'F', '0', '0', '0', 'system:config:export', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1036, '¹«¸æ²éÑ¯', 107, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'system:notice:query', '#', 'admin', null, null, null, null);
+values (1036, 'å…¬å‘ŠæŸ¥è¯¢', 107, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'system:notice:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1037, '¹«¸æĞÂÔö', 107, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'system:notice:add', '#', 'admin', null, null, null, null);
+values (1037, 'å…¬å‘Šæ–°å¢', 107, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'system:notice:add', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1038, '¹«¸æĞŞ¸Ä', 107, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'system:notice:edit', '#', 'admin', null, null, null, null);
+values (1038, 'å…¬å‘Šä¿®æ”¹', 107, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'system:notice:edit', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1039, '¹«¸æÉ¾³ı', 107, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'system:notice:remove', '#', 'admin', null, null, null, null);
+values (1039, 'å…¬å‘Šåˆ é™¤', 107, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'system:notice:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1040, '²Ù×÷²éÑ¯', 220, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:operlog:query', '#', 'admin', null, null, null, null);
+values (1040, 'æ“ä½œæŸ¥è¯¢', 220, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:operlog:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1041, '²Ù×÷É¾³ı', 220, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:operlog:remove', '#', 'admin', null, null, null, null);
+values (1041, 'æ“ä½œåˆ é™¤', 220, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:operlog:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1042, 'ÈÕÖ¾µ¼³ö', 220, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:operlog:export', '#', 'admin', null, null, null, null);
+values (1042, 'æ—¥å¿—å¯¼å‡º', 220, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:operlog:export', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1043, 'µÇÂ¼²éÑ¯', 230, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:logininfor:query', '#', 'admin', null, null, null, null);
+values (1043, 'ç™»å½•æŸ¥è¯¢', 230, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:logininfor:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1044, 'µÇÂ¼É¾³ı', 230, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:logininfor:remove', '#', 'admin', null, null, null, null);
+values (1044, 'ç™»å½•åˆ é™¤', 230, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:logininfor:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1045, 'ÈÕÖ¾µ¼³ö', 230, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:logininfor:export', '#', 'admin', null, null, null, null);
+values (1045, 'æ—¥å¿—å¯¼å‡º', 230, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:logininfor:export', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1046, 'ÔÚÏß²éÑ¯', 109, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:online:query', '#', 'admin', null, null, null, null);
+values (1046, 'åœ¨çº¿æŸ¥è¯¢', 109, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:online:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1047, 'ÅúÁ¿Ç¿ÍË', 109, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:online:batchLogout', '#', 'admin', null, null, null, null);
+values (1047, 'æ‰¹é‡å¼ºé€€', 109, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:online:batchLogout', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1048, 'µ¥ÌõÇ¿ÍË', 109, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:online:forceLogout', '#', 'admin', null, null, null, null);
+values (1048, 'å•æ¡å¼ºé€€', 109, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:online:forceLogout', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1049, 'ÈÎÎñ²éÑ¯', 110, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:query', '#', 'admin', null, null, null, null);
+values (1049, 'ä»»åŠ¡æŸ¥è¯¢', 110, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1050, 'ÈÎÎñĞÂÔö', 110, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:add', '#', 'admin', null, null, null, null);
+values (1050, 'ä»»åŠ¡æ–°å¢', 110, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:add', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1051, 'ÈÎÎñĞŞ¸Ä', 110, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:edit', '#', 'admin', null, null, null, null);
+values (1051, 'ä»»åŠ¡ä¿®æ”¹', 110, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:edit', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1052, 'ÈÎÎñÉ¾³ı', 110, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:remove', '#', 'admin', null, null, null, null);
+values (1052, 'ä»»åŠ¡åˆ é™¤', 110, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1053, '×´Ì¬ĞŞ¸Ä', 110, 5, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:changeStatus', '#', 'admin', null, null, null, null);
+values (1053, 'çŠ¶æ€ä¿®æ”¹', 110, 5, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:changeStatus', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1054, 'ÈÎÎñµ¼³ö', 110, 7, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:export', '#', 'admin', null, null, null, null);
+values (1054, 'ä»»åŠ¡å¯¼å‡º', 110, 7, '#', null, 1, 0, 'F', '0', '0', '0', 'monitor:job:export', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1055, 'Éú³É²éÑ¯', 115, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:query', '#', 'admin', null, null, null, null);
+values (1055, 'ç”ŸæˆæŸ¥è¯¢', 115, 1, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1056, 'Éú³ÉĞŞ¸Ä', 115, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:edit', '#', 'admin', null, null, null, null);
+values (1056, 'ç”Ÿæˆä¿®æ”¹', 115, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:edit', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1057, 'Éú³ÉÉ¾³ı', 115, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:remove', '#', 'admin', null, null, null, null);
+values (1057, 'ç”Ÿæˆåˆ é™¤', 115, 3, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:remove', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1058, 'µ¼Èë´úÂë', 115, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:import', '#', 'admin', null, null, null, null);
+values (1058, 'å¯¼å…¥ä»£ç ', 115, 2, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:import', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1059, 'Ô¤ÀÀ´úÂë', 115, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:preview', '#', 'admin', null, null, null, null);
+values (1059, 'é¢„è§ˆä»£ç ', 115, 4, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:preview', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1060, 'Éú³É´úÂë', 115, 5, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:code', '#', 'admin', null, null, null, null);
+values (1060, 'ç”Ÿæˆä»£ç ', 115, 5, '#', null, 1, 0, 'F', '0', '0', '0', 'tool:gen:code', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1061, '²¿ÃÅµ¼Èë', 103, 5, null, null, 1, 0, 'F', '0', '0', '0', 'system:dept:wechatin', '#', 'admin', null, null, null, null);
+values (1061, 'éƒ¨é—¨å¯¼å…¥', 103, 5, null, null, 1, 0, 'F', '0', '0', '0', 'system:dept:wechatin', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1062, 'ÓÃ»§µ¼Èë', 100, 7, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:wechatin', '#', 'admin', null, null, null, null);
+values (1062, 'ç”¨æˆ·å¯¼å…¥', 100, 7, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:wechatin', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1080, 'ÈËÔ±·Ö×é²éÑ¯', 121, 1, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:query', '#', 'admin', to_date('28-01-2023 20:02:09', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1080, 'äººå‘˜åˆ†ç»„æŸ¥è¯¢', 121, 1, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:query', '#', 'admin', to_date('28-01-2023 20:02:09', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1081, 'ÈËÔ±·Ö×éĞÂÔö', 121, 2, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:add', '#', 'admin', to_date('28-01-2023 20:02:09', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1081, 'äººå‘˜åˆ†ç»„æ–°å¢', 121, 2, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:add', '#', 'admin', to_date('28-01-2023 20:02:09', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1082, 'ÈËÔ±·Ö×éĞŞ¸Ä', 121, 3, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:edit', '#', 'admin', to_date('28-01-2023 20:02:09', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1082, 'äººå‘˜åˆ†ç»„ä¿®æ”¹', 121, 3, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:edit', '#', 'admin', to_date('28-01-2023 20:02:09', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1083, 'ÈËÔ±·Ö×éÉ¾³ı', 121, 4, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:remove', '#', 'admin', to_date('28-01-2023 20:02:10', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1083, 'äººå‘˜åˆ†ç»„åˆ é™¤', 121, 4, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:remove', '#', 'admin', to_date('28-01-2023 20:02:10', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1084, 'ÈËÔ±·Ö×éµ¼³ö', 121, 5, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:export', '#', 'admin', to_date('28-01-2023 20:02:10', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1084, 'äººå‘˜åˆ†ç»„å¯¼å‡º', 121, 5, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:export', '#', 'admin', to_date('28-01-2023 20:02:10', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1390, 'Í¼Æ¬¹ÜÀí²éÑ¯', 300, 1, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:query', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1390, 'å›¾ç‰‡ç®¡ç†æŸ¥è¯¢', 300, 1, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:query', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1391, 'Í¼Æ¬¹ÜÀíĞÂÔö', 300, 2, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:add', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1391, 'å›¾ç‰‡ç®¡ç†æ–°å¢', 300, 2, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:add', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1392, 'Í¼Æ¬¹ÜÀíĞŞ¸Ä', 300, 3, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:edit', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1392, 'å›¾ç‰‡ç®¡ç†ä¿®æ”¹', 300, 3, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:edit', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1393, 'Í¼Æ¬¹ÜÀíÉ¾³ı', 300, 4, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:remove', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1393, 'å›¾ç‰‡ç®¡ç†åˆ é™¤', 300, 4, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:remove', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1394, 'Í¼Æ¬¹ÜÀíÏÂÔØ', 300, 5, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:export', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1394, 'å›¾ç‰‡ç®¡ç†ä¸‹è½½', 300, 5, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:export', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1420, 'ÎÄ¼ş¹ÜÀí²éÑ¯', 305, 1, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:query', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1420, 'æ–‡ä»¶ç®¡ç†æŸ¥è¯¢', 305, 1, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:query', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1421, 'ÎÄ¼ş¹ÜÀíĞÂÔö', 305, 2, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:add', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1421, 'æ–‡ä»¶ç®¡ç†æ–°å¢', 305, 2, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:add', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1422, 'ÎÄ¼ş¹ÜÀíĞŞ¸Ä', 305, 3, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:edit', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1422, 'æ–‡ä»¶ç®¡ç†ä¿®æ”¹', 305, 3, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:edit', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1423, 'ÎÄ¼ş¹ÜÀíÉ¾³ı', 305, 4, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:remove', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1423, 'æ–‡ä»¶ç®¡ç†åˆ é™¤', 305, 4, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:remove', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1424, 'ÎÄ¼ş¹ÜÀíÏÂÔØ', 305, 5, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:export', '#', 'admin', to_date('17-12-2021 23:18:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1424, 'æ–‡ä»¶ç®¡ç†ä¸‹è½½', 305, 5, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:export', '#', 'admin', to_date('17-12-2021 23:18:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1501, '¿¼ÊÔ·ÖÀà²éÑ¯', 320, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:query', '#', 'admin', to_date('14-12-2022 14:32:15', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1501, 'è€ƒè¯•åˆ†ç±»æŸ¥è¯¢', 320, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:query', '#', 'admin', to_date('14-12-2022 14:32:15', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1502, '¿¼ÊÔ·ÖÀàĞÂÔö', 320, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:add', '#', 'admin', to_date('14-12-2022 14:32:15', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1502, 'è€ƒè¯•åˆ†ç±»æ–°å¢', 320, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:add', '#', 'admin', to_date('14-12-2022 14:32:15', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1503, '¿¼ÊÔ·ÖÀàĞŞ¸Ä', 320, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:edit', '#', 'admin', to_date('14-12-2022 14:32:15', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1503, 'è€ƒè¯•åˆ†ç±»ä¿®æ”¹', 320, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:edit', '#', 'admin', to_date('14-12-2022 14:32:15', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1504, '¿¼ÊÔ·ÖÀàÉ¾³ı', 320, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:remove', '#', 'admin', to_date('14-12-2022 14:32:16', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1504, 'è€ƒè¯•åˆ†ç±»åˆ é™¤', 320, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:remove', '#', 'admin', to_date('14-12-2022 14:32:16', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1505, '¿¼ÊÔ·ÖÀàµ¼³ö', 320, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:export', '#', 'admin', to_date('14-12-2022 14:32:16', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1505, 'è€ƒè¯•åˆ†ç±»å¯¼å‡º', 320, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:export', '#', 'admin', to_date('14-12-2022 14:32:16', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1525, 'Ìâ¿â¹ÜÀí²éÑ¯', 325, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:query', '#', 'admin', to_date('19-12-2022 14:10:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1525, 'é¢˜åº“ç®¡ç†æŸ¥è¯¢', 325, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:query', '#', 'admin', to_date('19-12-2022 14:10:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1526, 'Ìâ¿â¹ÜÀíĞÂÔö', 325, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:add', '#', 'admin', to_date('19-12-2022 14:10:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1526, 'é¢˜åº“ç®¡ç†æ–°å¢', 325, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:add', '#', 'admin', to_date('19-12-2022 14:10:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1527, 'Ìâ¿â¹ÜÀíĞŞ¸Ä', 325, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:edit', '#', 'admin', to_date('19-12-2022 14:10:58', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1527, 'é¢˜åº“ç®¡ç†ä¿®æ”¹', 325, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:edit', '#', 'admin', to_date('19-12-2022 14:10:58', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1528, 'Ìâ¿â¹ÜÀíÉ¾³ı', 325, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:remove', '#', 'admin', to_date('19-12-2022 14:10:58', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1528, 'é¢˜åº“ç®¡ç†åˆ é™¤', 325, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:remove', '#', 'admin', to_date('19-12-2022 14:10:58', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1529, 'Ìâ¿â¹ÜÀíµ¼³ö', 325, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:export', '#', 'admin', to_date('19-12-2022 14:10:58', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1529, 'é¢˜åº“ç®¡ç†å¯¼å‡º', 325, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:export', '#', 'admin', to_date('19-12-2022 14:10:58', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1541, '¿¼ÊÔÌâÄ¿²éÑ¯', 330, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:query', '#', 'admin', to_date('27-12-2022 20:10:55', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1541, 'è€ƒè¯•é¢˜ç›®æŸ¥è¯¢', 330, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:query', '#', 'admin', to_date('27-12-2022 20:10:55', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1542, '¿¼ÊÔÌâÄ¿ĞÂÔö', 330, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:add', '#', 'admin', to_date('27-12-2022 20:10:55', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1542, 'è€ƒè¯•é¢˜ç›®æ–°å¢', 330, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:add', '#', 'admin', to_date('27-12-2022 20:10:55', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1543, '¿¼ÊÔÌâÄ¿ĞŞ¸Ä', 330, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:edit', '#', 'admin', to_date('27-12-2022 20:10:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1543, 'è€ƒè¯•é¢˜ç›®ä¿®æ”¹', 330, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:edit', '#', 'admin', to_date('27-12-2022 20:10:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1544, '¿¼ÊÔÌâÄ¿É¾³ı', 330, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:remove', '#', 'admin', to_date('27-12-2022 20:10:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1544, 'è€ƒè¯•é¢˜ç›®åˆ é™¤', 330, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:remove', '#', 'admin', to_date('27-12-2022 20:10:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1545, '¿¼ÊÔÌâÄ¿µ¼³ö', 330, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:export', '#', 'admin', to_date('27-12-2022 20:10:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1545, 'è€ƒè¯•é¢˜ç›®å¯¼å‡º', 330, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:export', '#', 'admin', to_date('27-12-2022 20:10:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1601, '´´½¨¿¼ÊÔ²éÑ¯', 350, 1, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:query', '#', 'admin', to_date('06-01-2023 13:56:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1601, 'åˆ›å»ºè€ƒè¯•æŸ¥è¯¢', 350, 1, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:query', '#', 'admin', to_date('06-01-2023 13:56:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1602, '´´½¨¿¼ÊÔĞÂÔö', 350, 2, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:add', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1602, 'åˆ›å»ºè€ƒè¯•æ–°å¢', 350, 2, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:add', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1603, '´´½¨¿¼ÊÔĞŞ¸Ä', 350, 3, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:edit', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1603, 'åˆ›å»ºè€ƒè¯•ä¿®æ”¹', 350, 3, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:edit', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1604, '´´½¨¿¼ÊÔÉ¾³ı', 350, 4, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:remove', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1604, 'åˆ›å»ºè€ƒè¯•åˆ é™¤', 350, 4, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:remove', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1605, '´´½¨¿¼ÊÔµ¼³ö', 350, 5, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:export', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1605, 'åˆ›å»ºè€ƒè¯•å¯¼å‡º', 350, 5, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:export', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
 commit;
 
 
 -- ----------------------------
--- ³õÊ¼»¯-ÓÃ»§ºÍ½ÇÉ«¹ØÁª±íÊı¾İ
+-- åˆå§‹åŒ–-ç”¨æˆ·å’Œè§’è‰²å…³è”è¡¨æ•°æ®
 -- ----------------------------
 insert into SYS_USER_ROLE (user_id, role_id)
 values (1, 1);
@@ -307,7 +307,7 @@ insert into SYS_USER_ROLE (user_id, role_id)
 values (3, 2);
 
 -- ----------------------------
--- ³õÊ¼»¯-½ÇÉ«ºÍ²Ëµ¥¹ØÁª±íÊı¾İ
+-- åˆå§‹åŒ–-è§’è‰²å’Œèœå•å…³è”è¡¨æ•°æ®
 -- ----------------------------
 insert into sys_role_menu values ('2', '1');
 insert into sys_role_menu values ('2', '2');
@@ -395,76 +395,76 @@ insert into sys_role_menu values ('2', '1059');
 insert into sys_role_menu values ('2', '1060');
 
 -- ----------------------------
--- ³õÊ¼»¯-½ÇÉ«ºÍ²¿ÃÅ¹ØÁª±íÊı¾İ
+-- åˆå§‹åŒ–-è§’è‰²å’Œéƒ¨é—¨å…³è”è¡¨æ•°æ®
 -- ----------------------------
 insert into sys_role_dept values ('2', '100');
 insert into sys_role_dept values ('2', '101');
 insert into sys_role_dept values ('2', '105');
 
 -- ----------------------------
--- ³õÊ¼»¯-ÓÃ»§Óë¸ÚÎ»¹ØÁª±íÊı¾İ
+-- åˆå§‹åŒ–-ç”¨æˆ·ä¸å²—ä½å…³è”è¡¨æ•°æ®
 -- ----------------------------
 insert into sys_user_post values ('1', '1');
 insert into sys_user_post values ('2', '2');
 
 -- ----------------------------
--- ³õÊ¼»¯-×ÖµäÀàĞÍ±í
+-- åˆå§‹åŒ–-å­—å…¸ç±»å‹è¡¨
 -- ----------------------------
-insert into sys_dict_type values(1,  'ÓÃ»§ĞÔ±ğ', 'sys_user_sex',        '0', 'admin', sysdate, '', null, 'ÓÃ»§ĞÔ±ğÁĞ±í');
-insert into sys_dict_type values(2,  '²Ëµ¥×´Ì¬', 'sys_show_hide',       '0', 'admin', sysdate, '', null, '²Ëµ¥×´Ì¬ÁĞ±í');
-insert into sys_dict_type values(3,  'ÏµÍ³¿ª¹Ø', 'sys_normal_disable',  '0', 'admin', sysdate, '', null, 'ÏµÍ³¿ª¹ØÁĞ±í');
-insert into sys_dict_type values(4,  'ÈÎÎñ×´Ì¬', 'sys_job_status',      '0', 'admin', sysdate, '', null, 'ÈÎÎñ×´Ì¬ÁĞ±í');
-insert into sys_dict_type values(5,  'ÈÎÎñ·Ö×é', 'sys_job_group',       '0', 'admin', sysdate, '', null, 'ÈÎÎñ·Ö×éÁĞ±í');
-insert into sys_dict_type values(6,  'ÏµÍ³ÊÇ·ñ', 'sys_yes_no',          '0', 'admin', sysdate, '', null, 'ÏµÍ³ÊÇ·ñÁĞ±í');
-insert into sys_dict_type values(7,  'Í¨ÖªÀàĞÍ', 'sys_notice_type',     '0', 'admin', sysdate, '', null, 'Í¨ÖªÀàĞÍÁĞ±í');
-insert into sys_dict_type values(8,  'Í¨Öª×´Ì¬', 'sys_notice_status',   '0', 'admin', sysdate, '', null, 'Í¨Öª×´Ì¬ÁĞ±í');
-insert into sys_dict_type values(9,  '²Ù×÷ÀàĞÍ', 'sys_oper_type',       '0', 'admin', sysdate, '', null, '²Ù×÷ÀàĞÍÁĞ±í');
-insert into sys_dict_type values(10, 'ÏµÍ³×´Ì¬', 'sys_common_status',   '0', 'admin', sysdate, '', null, 'µÇÂ¼×´Ì¬ÁĞ±í');
+insert into sys_dict_type values(1,  'ç”¨æˆ·æ€§åˆ«', 'sys_user_sex',        '0', 'admin', sysdate, '', null, 'ç”¨æˆ·æ€§åˆ«åˆ—è¡¨');
+insert into sys_dict_type values(2,  'èœå•çŠ¶æ€', 'sys_show_hide',       '0', 'admin', sysdate, '', null, 'èœå•çŠ¶æ€åˆ—è¡¨');
+insert into sys_dict_type values(3,  'ç³»ç»Ÿå¼€å…³', 'sys_normal_disable',  '0', 'admin', sysdate, '', null, 'ç³»ç»Ÿå¼€å…³åˆ—è¡¨');
+insert into sys_dict_type values(4,  'ä»»åŠ¡çŠ¶æ€', 'sys_job_status',      '0', 'admin', sysdate, '', null, 'ä»»åŠ¡çŠ¶æ€åˆ—è¡¨');
+insert into sys_dict_type values(5,  'ä»»åŠ¡åˆ†ç»„', 'sys_job_group',       '0', 'admin', sysdate, '', null, 'ä»»åŠ¡åˆ†ç»„åˆ—è¡¨');
+insert into sys_dict_type values(6,  'ç³»ç»Ÿæ˜¯å¦', 'sys_yes_no',          '0', 'admin', sysdate, '', null, 'ç³»ç»Ÿæ˜¯å¦åˆ—è¡¨');
+insert into sys_dict_type values(7,  'é€šçŸ¥ç±»å‹', 'sys_notice_type',     '0', 'admin', sysdate, '', null, 'é€šçŸ¥ç±»å‹åˆ—è¡¨');
+insert into sys_dict_type values(8,  'é€šçŸ¥çŠ¶æ€', 'sys_notice_status',   '0', 'admin', sysdate, '', null, 'é€šçŸ¥çŠ¶æ€åˆ—è¡¨');
+insert into sys_dict_type values(9,  'æ“ä½œç±»å‹', 'sys_oper_type',       '0', 'admin', sysdate, '', null, 'æ“ä½œç±»å‹åˆ—è¡¨');
+insert into sys_dict_type values(10, 'ç³»ç»ŸçŠ¶æ€', 'sys_common_status',   '0', 'admin', sysdate, '', null, 'ç™»å½•çŠ¶æ€åˆ—è¡¨');
 
 -- ----------------------------
--- ³õÊ¼»¯-×ÖµäÊı¾İ±í
+-- åˆå§‹åŒ–-å­—å…¸æ•°æ®è¡¨
 -- ----------------------------
-insert into sys_dict_data values(1,  1,  'ÄĞ',       '0',       'sys_user_sex',        '',   '',        'Y', '0', 'admin', sysdate, '', null, 'ĞÔ±ğÄĞ');
-insert into sys_dict_data values(2,  2,  'Å®',       '1',       'sys_user_sex',        '',   '',        'N', '0', 'admin', sysdate, '', null, 'ĞÔ±ğÅ®');
-insert into sys_dict_data values(3,  3,  'Î´Öª',     '2',       'sys_user_sex',        '',   '',        'N', '0', 'admin', sysdate, '', null, 'ĞÔ±ğÎ´Öª');
-insert into sys_dict_data values(4,  1,  'ÏÔÊ¾',     '0',       'sys_show_hide',       '',   'primary', 'Y', '0', 'admin', sysdate, '', null, 'ÏÔÊ¾²Ëµ¥');
-insert into sys_dict_data values(5,  2,  'Òş²Ø',     '1',       'sys_show_hide',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'Òş²Ø²Ëµ¥');
-insert into sys_dict_data values(6,  1,  'Õı³£',     '0',       'sys_normal_disable',  '',   'primary', 'Y', '0', 'admin', sysdate, '', null, 'Õı³£×´Ì¬');
-insert into sys_dict_data values(7,  2,  'Í£ÓÃ',     '1',       'sys_normal_disable',  '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'Í£ÓÃ×´Ì¬');
-insert into sys_dict_data values(8,  1,  'Õı³£',     '0',       'sys_job_status',      '',   'primary', 'Y', '0', 'admin', sysdate, '', null, 'Õı³£×´Ì¬');
-insert into sys_dict_data values(9,  2,  'ÔİÍ£',     '1',       'sys_job_status',      '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'Í£ÓÃ×´Ì¬');
-insert into sys_dict_data values(10, 1,  'Ä¬ÈÏ',     'DEFAULT', 'sys_job_group',       '',   '',        'Y', '0', 'admin', sysdate, '', null, 'Ä¬ÈÏ·Ö×é');
-insert into sys_dict_data values(11, 2,  'ÏµÍ³',     'SYSTEM',  'sys_job_group',       '',   '',        'N', '0', 'admin', sysdate, '', null, 'ÏµÍ³·Ö×é');
-insert into sys_dict_data values(12, 1,  'ÊÇ',       'Y',       'sys_yes_no',          '',   'primary', 'Y', '0', 'admin', sysdate, '', null, 'ÏµÍ³Ä¬ÈÏÊÇ');
-insert into sys_dict_data values(13, 2,  '·ñ',       'N',       'sys_yes_no',          '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'ÏµÍ³Ä¬ÈÏ·ñ');
-insert into sys_dict_data values(14, 1,  'Í¨Öª',     '1',       'sys_notice_type',     '',   'warning', 'Y', '0', 'admin', sysdate, '', null, 'Í¨Öª');
-insert into sys_dict_data values(15, 2,  '¹«¸æ',     '2',       'sys_notice_type',     '',   'success', 'N', '0', 'admin', sysdate, '', null, '¹«¸æ');
-insert into sys_dict_data values(16, 1,  'Õı³£',     '0',       'sys_notice_status',   '',   'primary', 'Y', '0', 'admin', sysdate, '', null, 'Õı³£×´Ì¬');
-insert into sys_dict_data values(17, 2,  '¹Ø±Õ',     '1',       'sys_notice_status',   '',   'danger',  'N', '0', 'admin', sysdate, '', null, '¹Ø±Õ×´Ì¬');
-insert into sys_dict_data values(18, 1,  'ĞÂÔö',     '1',       'sys_oper_type',       '',   'info',    'N', '0', 'admin', sysdate, '', null, 'ĞÂÔö²Ù×÷');
-insert into sys_dict_data values(19, 2,  'ĞŞ¸Ä',     '2',       'sys_oper_type',       '',   'info',    'N', '0', 'admin', sysdate, '', null, 'ĞŞ¸Ä²Ù×÷');
-insert into sys_dict_data values(20, 3,  'É¾³ı',     '3',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'É¾³ı²Ù×÷');
-insert into sys_dict_data values(21, 4,  'ÊÚÈ¨',     '4',       'sys_oper_type',       '',   'primary', 'N', '0', 'admin', sysdate, '', null, 'ÊÚÈ¨²Ù×÷');
-insert into sys_dict_data values(22, 5,  'µ¼³ö',     '5',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', sysdate, '', null, 'µ¼³ö²Ù×÷');
-insert into sys_dict_data values(23, 6,  'µ¼Èë',     '6',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', sysdate, '', null, 'µ¼Èë²Ù×÷');
-insert into sys_dict_data values(24, 7,  'Ç¿ÍË',     '7',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'Ç¿ÍË²Ù×÷');
-insert into sys_dict_data values(25, 8,  'Éú³É´úÂë', '8',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', sysdate, '', null, 'Éú³É²Ù×÷');
-insert into sys_dict_data values(26, 9,  'Çå¿ÕÊı¾İ', '9',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'Çå¿Õ²Ù×÷');
-insert into sys_dict_data values(27, 1,  '³É¹¦',     '0',       'sys_common_status',   '',   'primary', 'N', '0', 'admin', sysdate, '', null, 'Õı³£×´Ì¬');
-insert into sys_dict_data values(28, 2,  'Ê§°Ü',     '1',       'sys_common_status',   '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'Í£ÓÃ×´Ì¬');
+insert into sys_dict_data values(1,  1,  'ç”·',       '0',       'sys_user_sex',        '',   '',        'Y', '0', 'admin', sysdate, '', null, 'æ€§åˆ«ç”·');
+insert into sys_dict_data values(2,  2,  'å¥³',       '1',       'sys_user_sex',        '',   '',        'N', '0', 'admin', sysdate, '', null, 'æ€§åˆ«å¥³');
+insert into sys_dict_data values(3,  3,  'æœªçŸ¥',     '2',       'sys_user_sex',        '',   '',        'N', '0', 'admin', sysdate, '', null, 'æ€§åˆ«æœªçŸ¥');
+insert into sys_dict_data values(4,  1,  'æ˜¾ç¤º',     '0',       'sys_show_hide',       '',   'primary', 'Y', '0', 'admin', sysdate, '', null, 'æ˜¾ç¤ºèœå•');
+insert into sys_dict_data values(5,  2,  'éšè—',     '1',       'sys_show_hide',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'éšè—èœå•');
+insert into sys_dict_data values(6,  1,  'æ­£å¸¸',     '0',       'sys_normal_disable',  '',   'primary', 'Y', '0', 'admin', sysdate, '', null, 'æ­£å¸¸çŠ¶æ€');
+insert into sys_dict_data values(7,  2,  'åœç”¨',     '1',       'sys_normal_disable',  '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'åœç”¨çŠ¶æ€');
+insert into sys_dict_data values(8,  1,  'æ­£å¸¸',     '0',       'sys_job_status',      '',   'primary', 'Y', '0', 'admin', sysdate, '', null, 'æ­£å¸¸çŠ¶æ€');
+insert into sys_dict_data values(9,  2,  'æš‚åœ',     '1',       'sys_job_status',      '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'åœç”¨çŠ¶æ€');
+insert into sys_dict_data values(10, 1,  'é»˜è®¤',     'DEFAULT', 'sys_job_group',       '',   '',        'Y', '0', 'admin', sysdate, '', null, 'é»˜è®¤åˆ†ç»„');
+insert into sys_dict_data values(11, 2,  'ç³»ç»Ÿ',     'SYSTEM',  'sys_job_group',       '',   '',        'N', '0', 'admin', sysdate, '', null, 'ç³»ç»Ÿåˆ†ç»„');
+insert into sys_dict_data values(12, 1,  'æ˜¯',       'Y',       'sys_yes_no',          '',   'primary', 'Y', '0', 'admin', sysdate, '', null, 'ç³»ç»Ÿé»˜è®¤æ˜¯');
+insert into sys_dict_data values(13, 2,  'å¦',       'N',       'sys_yes_no',          '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'ç³»ç»Ÿé»˜è®¤å¦');
+insert into sys_dict_data values(14, 1,  'é€šçŸ¥',     '1',       'sys_notice_type',     '',   'warning', 'Y', '0', 'admin', sysdate, '', null, 'é€šçŸ¥');
+insert into sys_dict_data values(15, 2,  'å…¬å‘Š',     '2',       'sys_notice_type',     '',   'success', 'N', '0', 'admin', sysdate, '', null, 'å…¬å‘Š');
+insert into sys_dict_data values(16, 1,  'æ­£å¸¸',     '0',       'sys_notice_status',   '',   'primary', 'Y', '0', 'admin', sysdate, '', null, 'æ­£å¸¸çŠ¶æ€');
+insert into sys_dict_data values(17, 2,  'å…³é—­',     '1',       'sys_notice_status',   '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'å…³é—­çŠ¶æ€');
+insert into sys_dict_data values(18, 1,  'æ–°å¢',     '1',       'sys_oper_type',       '',   'info',    'N', '0', 'admin', sysdate, '', null, 'æ–°å¢æ“ä½œ');
+insert into sys_dict_data values(19, 2,  'ä¿®æ”¹',     '2',       'sys_oper_type',       '',   'info',    'N', '0', 'admin', sysdate, '', null, 'ä¿®æ”¹æ“ä½œ');
+insert into sys_dict_data values(20, 3,  'åˆ é™¤',     '3',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'åˆ é™¤æ“ä½œ');
+insert into sys_dict_data values(21, 4,  'æˆæƒ',     '4',       'sys_oper_type',       '',   'primary', 'N', '0', 'admin', sysdate, '', null, 'æˆæƒæ“ä½œ');
+insert into sys_dict_data values(22, 5,  'å¯¼å‡º',     '5',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', sysdate, '', null, 'å¯¼å‡ºæ“ä½œ');
+insert into sys_dict_data values(23, 6,  'å¯¼å…¥',     '6',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', sysdate, '', null, 'å¯¼å…¥æ“ä½œ');
+insert into sys_dict_data values(24, 7,  'å¼ºé€€',     '7',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'å¼ºé€€æ“ä½œ');
+insert into sys_dict_data values(25, 8,  'ç”Ÿæˆä»£ç ', '8',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', sysdate, '', null, 'ç”Ÿæˆæ“ä½œ');
+insert into sys_dict_data values(26, 9,  'æ¸…ç©ºæ•°æ®', '9',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'æ¸…ç©ºæ“ä½œ');
+insert into sys_dict_data values(27, 1,  'æˆåŠŸ',     '0',       'sys_common_status',   '',   'primary', 'N', '0', 'admin', sysdate, '', null, 'æ­£å¸¸çŠ¶æ€');
+insert into sys_dict_data values(28, 2,  'å¤±è´¥',     '1',       'sys_common_status',   '',   'danger',  'N', '0', 'admin', sysdate, '', null, 'åœç”¨çŠ¶æ€');
 
 -- ----------------------------
--- ³õÊ¼»¯-²ÎÊıÅäÖÃ±í
+-- åˆå§‹åŒ–-å‚æ•°é…ç½®è¡¨
 -- ----------------------------
-insert into sys_config values(1, 'Ö÷¿ò¼ÜÒ³-Ä¬ÈÏÆ¤·ôÑùÊ½Ãû³Æ', 'sys.index.skinName',            'skin-blue',     'Y', 'admin', sysdate, '', null, 'À¶É« skin-blue¡¢ÂÌÉ« skin-green¡¢×ÏÉ« skin-purple¡¢ºìÉ« skin-red¡¢»ÆÉ« skin-yellow' );
-insert into sys_config values(2, 'ÓÃ»§¹ÜÀí-ÕËºÅ³õÊ¼ÃÜÂë',     'sys.user.initPassword',         '123456',        'Y', 'admin', sysdate, '', null, '³õÊ¼»¯ÃÜÂë 123456' );
-insert into sys_config values(3, 'Ö÷¿ò¼ÜÒ³-²à±ßÀ¸Ö÷Ìâ',       'sys.index.sideTheme',           'theme-dark',    'Y', 'admin', sysdate, '', null, 'ÉîÉ«Ö÷Ìâtheme-dark£¬Ç³É«Ö÷Ìâtheme-light' );
-insert into sys_config values(4, 'ÕËºÅ×ÔÖú-ÑéÖ¤Âë¿ª¹Ø',       'sys.account.captchaOnOff',      'true',          'Y', 'admin', sysdate, '', null, 'ÊÇ·ñ¿ªÆôµÇÂ¼ÑéÖ¤Âë¹¦ÄÜ£¨true¿ªÆô£¬false¹Ø±Õ£©');
+insert into sys_config values(1, 'ä¸»æ¡†æ¶é¡µ-é»˜è®¤çš®è‚¤æ ·å¼åç§°', 'sys.index.skinName',            'skin-blue',     'Y', 'admin', sysdate, '', null, 'è“è‰² skin-blueã€ç»¿è‰² skin-greenã€ç´«è‰² skin-purpleã€çº¢è‰² skin-redã€é»„è‰² skin-yellow' );
+insert into sys_config values(2, 'ç”¨æˆ·ç®¡ç†-è´¦å·åˆå§‹å¯†ç ',     'sys.user.initPassword',         '123456',        'Y', 'admin', sysdate, '', null, 'åˆå§‹åŒ–å¯†ç  123456' );
+insert into sys_config values(3, 'ä¸»æ¡†æ¶é¡µ-ä¾§è¾¹æ ä¸»é¢˜',       'sys.index.sideTheme',           'theme-dark',    'Y', 'admin', sysdate, '', null, 'æ·±è‰²ä¸»é¢˜theme-darkï¼Œæµ…è‰²ä¸»é¢˜theme-light' );
+insert into sys_config values(4, 'è´¦å·è‡ªåŠ©-éªŒè¯ç å¼€å…³',       'sys.account.captchaOnOff',      'true',          'Y', 'admin', sysdate, '', null, 'æ˜¯å¦å¼€å¯ç™»å½•éªŒè¯ç åŠŸèƒ½ï¼ˆtrueå¼€å¯ï¼Œfalseå…³é—­ï¼‰');
 
 -- ----------------------------
--- ³õÊ¼»¯-¹«¸æĞÅÏ¢±íÊı¾İ
+-- åˆå§‹åŒ–-å…¬å‘Šä¿¡æ¯è¡¨æ•°æ®
 -- ----------------------------
-insert into sys_notice values('1', 'ÎÂÜ°ÌáĞÑ£º2018-07-01 ĞÂ°æ±¾·¢²¼À²', '2', 'ĞÂ°æ±¾ÄÚÈİ', '0', 'admin', sysdate, '', null, '¹ÜÀíÔ±');
-insert into sys_notice values('2', 'Î¬»¤Í¨Öª£º2018-07-01 ÏµÍ³Áè³¿Î¬»¤', '1', 'Î¬»¤ÄÚÈİ',   '0', 'admin', sysdate, '', null, '¹ÜÀíÔ±');
+insert into sys_notice values('1', 'æ¸©é¦¨æé†’ï¼š2018-07-01 æ–°ç‰ˆæœ¬å‘å¸ƒå•¦', '2', 'æ–°ç‰ˆæœ¬å†…å®¹', '0', 'admin', sysdate, '', null, 'ç®¡ç†å‘˜');
+insert into sys_notice values('2', 'ç»´æŠ¤é€šçŸ¥ï¼š2018-07-01 ç³»ç»Ÿå‡Œæ™¨ç»´æŠ¤', '1', 'ç»´æŠ¤å†…å®¹',   '0', 'admin', sysdate, '', null, 'ç®¡ç†å‘˜');
 commit;
 

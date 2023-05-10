@@ -44,11 +44,11 @@
         </dependency>
         
 		 <!--oracle驱动-->
-		<dependency>
+		<!-- <dependency>
 		  <groupId>com.oracle</groupId>
 		  <artifactId>ojdbc8</artifactId>
 		  <version>12.2.0.1.0</version>
-		</dependency>	
+		</dependency>	 -->
         <!-- 核心模块-->
         <dependency>
             <groupId>com.ruoyi</groupId>
