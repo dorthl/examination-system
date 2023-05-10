@@ -29,11 +29,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </resultMap>
 
     <select id="selectCurrentExam" parameterType="String" resultMap="ExamTitleDataResult">
-	    select a.exam_id, a.exam_code, a.exam_name, a.exam_describe, a.build_type, a.force_done, a.exam_bank, a.exam_bank_text, a.picture_url, a.start_time, a.end_time,sysdate as current_date, a.exam_duration, b.judge_number,c.radio_number, d.choice_number, e.questions_score, a.status, a.create_by, a.create_dept, a.create_time
+	    select a.exam_id, a.exam_code, a.exam_name, a.exam_describe, a.build_type, a.force_done, a.exam_bank, a.exam_bank_text, a.picture_url, a.start_time, a.end_time,now() as current_date, a.exam_duration, b.judge_number,c.radio_number, d.choice_number, e.questions_score, a.status, a.create_by, a.create_dept, a.create_time
 		from exam_task_manager a 
 		left join
 		(
-		select questions_type,nvl(count(questions_type),0) as judge_number from exam_questions_property
+		select questions_type,IFNULL(count(questions_type),0) as judge_number from exam_questions_property
 		where questions_type = 1 and questions_code in
 		(
 		select questions_code from exam_task_questions where exam_code = 
@@ -42,20 +42,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		(
 		select exam_code from exam_task_person 
 		where user_code = #{userCode} and status = 1 
-		) and end_time > sysdate and start_time =
+		) and end_time > now() and start_time =
 		(
 		select min(start_time) as start_time from exam_task_manager where exam_code in
 		(
 		select exam_code from exam_task_person 
 		where user_code = #{userCode} and status = 1
-		) and end_time > sysdate 
+		) and end_time > now() 
 		)
 		)
 		) group by questions_type 
 		) b on 1 = 1
 		left join
 		(
-		select questions_type,nvl(count(questions_type),0) as radio_number from exam_questions_property
+		select questions_type,IFNULL(count(questions_type),0) as radio_number from exam_questions_property
 		where questions_type = 2 and questions_code in
 		(
 		select questions_code from exam_task_questions where exam_code = 
@@ -64,20 +64,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		(
 		select exam_code from exam_task_person 
 		where user_code = #{userCode} and status = 1 
-		) and end_time > sysdate and start_time =
+		) and end_time > now() and start_time =
 		(
 		select min(start_time) as start_time from exam_task_manager where exam_code in
 		(
 		select exam_code from exam_task_person 
 		where user_code = #{userCode} and status = 1
-		) and end_time > sysdate 
+		) and end_time > now() 
 		)
 		)
 		) group by questions_type 
 		) c on 1 = 1
 		left join
 		(
-		select questions_type,nvl(count(questions_type),0) as choice_number from exam_questions_property
+		select questions_type,IFNULL(count(questions_type),0) as choice_number from exam_questions_property
 		where questions_type = 3 and questions_code in
 		(
 		select questions_code from exam_task_questions where exam_code = 
@@ -86,13 +86,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		(
 		select exam_code from exam_task_person 
 		where user_code = #{userCode} and status = 1 
-		) and end_time > sysdate and start_time =
+		) and end_time > now() and start_time =
 		(
 		select min(start_time) as start_time from exam_task_manager where exam_code in
 		(
 		select exam_code from exam_task_person 
 		where user_code = #{userCode} and status = 1
-		) and end_time > sysdate 
+		) and end_time > now() 
 		)
 		)
 		) group by questions_type 
@@ -108,13 +108,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		(
 		select exam_code from exam_task_person 
 		where user_code = #{userCode} and status = 1 
-		) and end_time > sysdate and start_time =
+		) and end_time > now() and start_time =
 		(
 		select min(start_time) as start_time from exam_task_manager where exam_code in
 		(
 		select exam_code from exam_task_person 
 		where user_code = #{userCode} and status = 1
-		) and end_time > sysdate 
+		) and end_time > now() 
 		)
 		)
 		) 
@@ -123,13 +123,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		(
 		select exam_code from exam_task_person 
 		where user_code = #{userCode} and status = 1 
-		) and end_time > sysdate and start_time =
+		) and end_time > now() and start_time =
 		(
 		select min(start_time) as start_time from exam_task_manager where exam_code in
 		(
 		select exam_code from exam_task_person 
 		where user_code = #{userCode} and status = 1
-		) and end_time > sysdate 
+		) and end_time > now() 
 		)
     </select>
 

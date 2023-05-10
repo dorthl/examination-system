@@ -46,14 +46,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             status,
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-            (select nvl(max(photo_id),0) + 1  from exam_bank_picture),
+            (select IFNULL(max(photo_id),0) + 1  from exam_bank_picture),
             <if test="photoCode != null">#{photoCode},</if>
             <if test="photoPath != null">#{photoPath},</if>
             <if test="photoUrl != null">#{photoUrl},</if>
             <if test="fileName != null and fileName != ''">#{fileName},</if>
             <if test="originalName != null">#{originalName},</if>
             <if test="createBy != null">#{createBy},</if>
-            sysdate,
+            now(),
             0,
          </trim>
     </insert>

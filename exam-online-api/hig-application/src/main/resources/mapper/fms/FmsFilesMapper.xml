@@ -52,7 +52,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             status,
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-            (select nvl(max(file_id),0) + 1 from fms_files),
+            (select IFNULL(max(file_id),0) + 1 from fms_files),
             <if test="fileTitle != null and fileTitle != ''">#{fileTitle},</if>
             <if test="fileDescribe != null and fileDescribe != ''">#{fileDescribe},</if>
             <if test="fileName != null and fileName != ''">#{fileName},</if>
@@ -62,7 +62,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="originalName != null">#{originalName},</if>
             <if test="uploadName != null">#{uploadName},</if>
             <if test="uploadDept != null">#{uploadDept},</if>
-            sysdate,
+            now(),
             0,
          </trim>
     </insert>
@@ -72,7 +72,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <trim prefix="SET" suffixOverrides=",">
             <if test="fileTitle != null and fileTitle != ''">file_title = #{fileTitle},</if>
             <if test="fileDescribe != null and fileDescribe != ''">file_describe = #{fileDescribe},</if>
-            upload_time = sysdate,
+            upload_time = now(),
         </trim>
         where file_id = #{fileId}
     </update>

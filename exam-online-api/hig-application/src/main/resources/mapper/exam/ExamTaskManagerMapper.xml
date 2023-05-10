@@ -69,7 +69,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             create_time,
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-            (select nvl(max(exam_id),0) + 1  from exam_task_manager),
+            (select IFNULL(max(exam_id),0) + 1  from exam_task_manager),
             <if test="examCode != null and examCode != ''">#{examCode},</if>
             <if test="examName != null and examName != ''">#{examName},</if>
             <if test="examDescribe != null">#{examDescribe},</if>
@@ -84,7 +84,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             0,
             <if test="createBy != null">#{createBy},</if>
             <if test="createDept != null">#{createDept},</if>
-            sysdate,
+            now(),
          </trim>
     </insert>
 

@@ -62,7 +62,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     
     <insert id="insertGenTableColumn" parameterType="GenTableColumn">
         <selectKey keyProperty="columnId" resultType="long" order="BEFORE">
-            select nvl(max(column_id),0) + 1 from gen_table_column
+            select IFNULL(max(column_id),0) + 1 from gen_table_column
         </selectKey>
         insert into gen_table_column (
 			column_id,
@@ -86,7 +86,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="createBy != null and createBy != ''">create_by,</if>
 			create_time
          )values(
-			(select nvl(max(column_id),0) + 1 from gen_table_column),
+			(select IFNULL(max(column_id),0) + 1 from gen_table_column),
 			<if test="tableId != null and tableId != ''">#{tableId},</if>
 			<if test="columnName != null and columnName != ''">#{columnName},</if>
 			<if test="columnComment != null and columnComment != ''">#{columnComment},</if>
@@ -105,7 +105,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="dictType != null and dictType != ''">#{dictType},</if>
 			<if test="sort != null">#{sort},</if>
 			<if test="createBy != null and createBy != ''">#{createBy},</if>
-			sysdate
+			now()
          )
     </insert>
 	 
@@ -125,7 +125,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             dict_type = #{dictType,jdbcType=VARCHAR},
             sort = #{sort},
             update_by = #{updateBy,jdbcType=VARCHAR},
-            update_time = sysdate
+            update_time = now()
         </set>
         where column_id = #{columnId}
     </update>

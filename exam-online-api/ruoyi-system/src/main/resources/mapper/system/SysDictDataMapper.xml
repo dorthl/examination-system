@@ -84,7 +84,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="status != null">status = #{status},</if>
  			<if test="remark != null">remark = #{remark},</if>
  			<if test="updateBy != null and updateBy != ''">update_by = #{updateBy},</if>
- 			update_time = sysdate
+ 			update_time = now()
  		</set>
  		where dict_code = #{dictCode}
 	</update>
@@ -108,7 +108,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="createBy != null and createBy != ''">create_by,</if>
  			create_time
  		)values(
- 		    (select nvl(max(config_id),0) + 1 from sys_config),
+ 		    (select IFNULL(max(config_id),0) + 1 from sys_config),
  		    <if test="dictSort != null">#{dictSort},</if>
  		    <if test="dictLabel != null and dictLabel != ''">#{dictLabel},</if>
  			<if test="dictValue != null and dictValue != ''">#{dictValue},</if>
@@ -119,7 +119,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="status != null">#{status},</if>
  			<if test="remark != null and remark != ''">#{remark},</if>
  			<if test="createBy != null and createBy != ''">#{createBy},</if>
- 			sysdate
+ 			now()
  		)
 	</insert>
 	

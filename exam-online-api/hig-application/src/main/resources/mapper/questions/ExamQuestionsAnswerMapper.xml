@@ -52,7 +52,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="isRight != null">#{isRight},</if>
             <if test="orderId != null">#{orderId},</if>
             <if test="orderId == null or orderId == ''">
-                (select nvl(max(order_id),0) + 1  from exam_questions_answer where questions_code = #{questionsCode}),              
+                (select IFNULL(max(order_id),0) + 1  from exam_questions_answer where questions_code = #{questionsCode}),              
             </if>
             
          </trim>

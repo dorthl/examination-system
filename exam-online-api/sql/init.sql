@@ -12,9 +12,9 @@ create table sys_dept (
     status CHAR(1) NULL, 
     del_flag CHAR(1) NULL,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     constraint PK_sys_dept  primary key (dept_id)
 );
 
@@ -33,11 +33,11 @@ create table sys_user (
     status CHAR(1) NULL, 
     del_flag CHAR(1) NULL,
     login_ip VARCHAR(128) NULL,
-    login_date DATE NULL,
+    login_date datetime NULL,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_sys_user  primary key (user_id)
 );
@@ -50,9 +50,9 @@ create table sys_post (
     status CHAR(1) NULL, 
     del_flag CHAR(1) NULL,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_sys_post  primary key (post_id)
 );
@@ -69,9 +69,9 @@ create table sys_role (
     status CHAR(1) NULL, 
     del_flag CHAR(1) NULL,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_sys_role  primary key (role_id)
 );
@@ -92,9 +92,9 @@ create table sys_menu (
     perms VARCHAR(100) NULL,
     icon VARCHAR(100) NULL,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_sys_menu  primary key (menu_id)
 );
@@ -139,7 +139,7 @@ create table sys_oper_log (
     json_result VARCHAR(2000) null,
     status CHAR(1) NULL, 
     error_msg VARCHAR(2000) NULL,
-    oper_time DATE NULL, 
+    oper_time datetime NULL, 
     constraint PK_sys_oper_log  primary key (oper_id)
 );
 
@@ -149,9 +149,9 @@ create table sys_dict_type (
     dict_type VARCHAR(50) null,
     status CHAR(1) NULL, 
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_sys_dict_type  primary key (dict_id)
 );
@@ -167,9 +167,9 @@ create table sys_dict_data (
     is_default CHAR(1) NULL,
     status CHAR(1) NULL, 
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_sys_dict_data  primary key (dict_code)
 );
@@ -181,9 +181,9 @@ create table sys_config (
     config_value VARCHAR(100) null,
     config_type CHAR(1) NULL,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_sys_config  primary key (config_id)
 );
@@ -197,7 +197,7 @@ create table sys_logininfor (
     os VARCHAR(50) null,
     status CHAR(1) NULL,
     msg VARCHAR(600) NULL, 
-    login_time DATE NULL, 
+    login_time datetime NULL, 
     constraint PK_sys_logininfor  primary key (info_id)
 );
 
@@ -211,9 +211,9 @@ create table sys_job (
     concurrent CHAR(1) NULL,
     status CHAR(1) NULL,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_sys_job  primary key (job_id)
 );
@@ -226,7 +226,7 @@ create table sys_job_log (
     job_message VARCHAR(500) null,
     status CHAR(1) NULL,
     exception_info VARCHAR(2000) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     constraint PK_sys_job_log  primary key (job_log_id)
 );
 
@@ -237,9 +237,9 @@ create table sys_notice (
     notice_content longtext null,
     status CHAR(1) NULL,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_sys_notice  primary key (notice_id)
 );
@@ -251,7 +251,7 @@ create table sys_group (
     group_describe VARCHAR(200) NOT null,
     status CHAR(1) NULL, 
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     constraint PK_sys_group  primary key (group_id)
 );
 
@@ -287,9 +287,9 @@ create table gen_table (
     options VARCHAR(1000) null,
     status CHAR(1) NULL,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_gen_table  primary key (table_id)
 );
@@ -315,9 +315,9 @@ create table gen_table_column (
     dict_type VARCHAR(200) null,
     sort Int NULL,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     update_by VARCHAR(100) NULL, 
-    update_time DATE NULL, 
+    update_time datetime NULL, 
     remark VARCHAR(600) NULL,
     constraint PK_gen_table_column  primary key (column_id,table_id)
 );
@@ -497,7 +497,7 @@ create table fms_photo (
     original_name VARCHAR(600) null,
     upload_name VARCHAR(100) NULL, 
     upload_dept VARCHAR(50) NULL, 
-    upload_time DATE NULL,
+    upload_time datetime NULL,
     status Int NULL,
     constraint PK_fms_photo  primary key (photo_id)
 );
@@ -513,7 +513,7 @@ create table fms_files (
     original_name VARCHAR(600) null,
     upload_name VARCHAR(100) NULL, 
     upload_dept VARCHAR(50) NULL, 
-    upload_time DATE NULL,
+    upload_time datetime NULL,
     status Int NULL,
     constraint PK_fms_files  primary key (file_id)
 );
@@ -527,7 +527,7 @@ create table exam_type (
     order_id Int null,
     status Int NULL, 
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     constraint PK_exam_type  primary key (type_id)
 );
 
@@ -538,7 +538,7 @@ create table exam_questions_bank (
     bank_describe VARCHAR(300) null,
     bank_version VARCHAR(60) null,
     exam_type Int NULL, 
-    online_date DATE NULL, 
+    online_date datetime NULL, 
     picture_url VARCHAR(600) NULL,
     radio_score Int NULL, 
     choice_score Int NULL, 
@@ -546,7 +546,7 @@ create table exam_questions_bank (
     status Int NULL, 
     create_by VARCHAR(100) NULL, 
     create_dept Int NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     constraint PK_exam_questions_bank  primary key (bank_code)
 );
 
@@ -558,7 +558,7 @@ create table exam_bank_picture (
     file_name VARCHAR(60) null,
     original_name VARCHAR(200) null,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     status Int null,
     constraint PK_exam_bank_picture  primary key (photo_code)
 );
@@ -582,7 +582,7 @@ create table exam_questions_property(
     status Int NULL, 
     create_by VARCHAR(100) NULL, 
     create_dept Int NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     constraint PK_exam_questions_property  primary key (questions_code)
 );
 
@@ -609,7 +609,7 @@ create table exam_questions (
     status Int NULL, 
     create_by VARCHAR(100) NULL, 
     create_dept Int NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     constraint PK_exam_questions  primary key (questions_code)
 );
 
@@ -623,13 +623,13 @@ create table exam_task_manager(
     exam_bank VARCHAR(600) null,
     exam_bank_text VARCHAR(1200) null,
     picture_url VARCHAR(200) null,
-    start_time DATE NULL, 
-    end_time DATE NULL,
+    start_time datetime NULL, 
+    end_time datetime NULL,
     exam_duration VARCHAR(30) NULL, 
     status Int NULL, 
     create_by VARCHAR(100) NULL, 
     create_dept Int NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     constraint PK_exam_task_manager  primary key (exam_code)
 );
 
@@ -641,7 +641,7 @@ create table exam_task_picture (
     file_name VARCHAR(60) null,
     original_name VARCHAR(200) null,
     create_by VARCHAR(100) NULL, 
-    create_time DATE NULL, 
+    create_time datetime NULL, 
     status Int null,
     constraint PK_exam_task_picture  primary key (photo_code)
 );
@@ -664,8 +664,8 @@ create table exam_task_person(
     exam_code VARCHAR(50) NOT NULL,
     user_code VARCHAR(120) NOT null,
     task_code VARCHAR(50) NOT NULL,
-    start_time DATE NULL,
-    end_time DATE NULL,
+    start_time datetime NULL,
+    end_time datetime NULL,
     status Int null,
     constraint PK_exam_task_person  primary key (exam_code,user_code)
 );
@@ -673,8 +673,8 @@ create table exam_task_person(
 create table exam_user_score (
     exam_code VARCHAR(50) NOT NULL,
     user_code VARCHAR(120) NOT null,
-    start_time DATE NULL,
-    end_time DATE NULL,
+    start_time datetime NULL,
+    end_time datetime NULL,
     questions_score decimal(8,2) null,
     exam_score decimal(8,2) null,
     exam_number int null,

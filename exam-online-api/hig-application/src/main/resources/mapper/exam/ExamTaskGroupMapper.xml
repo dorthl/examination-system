@@ -35,7 +35,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="examCode != null and examCode != ''">#{examCode},</if>
             <if test="groupCode != null and groupCode != ''">#{groupCode},</if>
-            (select nvl(max(order_id),0) + 1 from exam_task_group where exam_code = #{examCode}),
+            (select IFNULL(max(order_id),0) + 1 from exam_task_group where exam_code = #{examCode}),
          </trim>
     </insert>
 

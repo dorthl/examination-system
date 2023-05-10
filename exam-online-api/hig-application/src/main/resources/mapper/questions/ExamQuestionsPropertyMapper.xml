@@ -60,7 +60,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="bankCode != null">#{bankCode},</if>
-            (select nvl(max(questions_id),0) + 1  from exam_questions_property),
+            (select IFNULL(max(questions_id),0) + 1  from exam_questions_property),
             <if test="questionsCode != null">#{questionsCode},</if>
             <if test="questionsTitle != null">#{questionsTitle},</if>
             <if test="questionsType != null">#{questionsType},</if>
@@ -71,7 +71,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             0,
             <if test="createBy != null">#{createBy},</if>
             <if test="createDept != null">#{createDept},</if>
-            sysdate,
+            now(),
          </trim>
     </insert>
 

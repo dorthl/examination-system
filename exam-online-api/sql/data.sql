@@ -2,29 +2,29 @@
 -- ----------------------------
 -- 初始化-部门表数据
 -- ----------------------------
-insert into sys_dept(dept_id,parent_id,ancestors,dept_code,dept_name,order_num,leader,phone,email,status,del_flag,create_by,create_time) values (100,0,'0','5301001','测试用单位',0,'','13512345678','','0','0','admin',sysdate);
+insert into sys_dept(dept_id,parent_id,ancestors,dept_code,dept_name,order_num,leader,phone,email,status,del_flag,create_by,create_time) values (100,0,'0','5301001','测试用单位',0,'','13512345678','','0','0','admin',now());
 
 -- ----------------------------
 -- 初始化-用户信息表数据
 -- ----------------------------
 insert into SYS_USER (user_id, user_code, dept_id, user_name, nick_name, user_type, email, phonenumber, sex, avatar, password, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark)
-values (2, '40288b0186e867550186e867559d0000', 100, 'user1', '用户一', null, null, '13654128596', null, null, '$2a$10$aqSRTGVSqrZFwp.s5JXic.5JtZDYFq.19hriwW7seEdPGo6SJu3.W', '0', '0', '127.0.0.1', to_date('16-03-2023 11:16:56', 'dd-mm-yyyy hh24:mi:ss'), 'admin', to_date('16-03-2023 11:11:57', 'dd-mm-yyyy hh24:mi:ss'), null, to_date('16-03-2023 11:16:42', 'dd-mm-yyyy hh24:mi:ss'), null);
+values (2, '40288b0186e867550186e867559d0000', 100, 'user1', '用户一', null, null, '13654128596', null, null, '$2a$10$aqSRTGVSqrZFwp.s5JXic.5JtZDYFq.19hriwW7seEdPGo6SJu3.W', '0', '0', '127.0.0.1', '2023-03-16 11:16:56', 'admin', '2023-03-16 11:16:56', null, '2023-03-16 11:16:56', null);
 insert into SYS_USER (user_id, user_code, dept_id, user_name, nick_name, user_type, email, phonenumber, sex, avatar, password, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark)
-values (3, '40288b0186e867550186e86911cc0001', 100, 'user2', '用户二', null, null, '13698568741', null, null, '$2a$10$Sh3WZ3ozH8Q88oG7mla.jerm3f3rCaq0QzD1KEPXXFrzcay0Hgz.S', '0', '0', null, null, 'admin', to_date('16-03-2023 11:13:51', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (3, '40288b0186e867550186e86911cc0001', 100, 'user2', '用户二', null, null, '13698568741', null, null, '$2a$10$Sh3WZ3ozH8Q88oG7mla.jerm3f3rCaq0QzD1KEPXXFrzcay0Hgz.S', '0', '0', null, null, 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_USER (user_id, user_code, dept_id, user_name, nick_name, user_type, email, phonenumber, sex, avatar, password, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark)
-values (1, 'F6FFFC4E3A50062DE0534479C80A75C1', 100, 'admin', '系统管理员', '00', 'abc@qq.com', '13512345678', '0', null, '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', '0', '0', '127.0.0.1', to_date('16-03-2023 11:19:58', 'dd-mm-yyyy hh24:mi:ss'), 'admin', null, null, to_date('16-03-2023 11:19:44', 'dd-mm-yyyy hh24:mi:ss'), null);
+values (1, 'F6FFFC4E3A50062DE0534479C80A75C1', 100, 'admin', '系统管理员', '00', 'abc@qq.com', '13512345678', '0', null, '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', '0', '0', '127.0.0.1', '2023-03-16 11:16:56', 'admin', null, null, '2023-03-16 11:16:56', null);
 
 -- 初始化-岗位信息表数据
 -- ----------------------------
-insert into sys_post (post_id,post_code,post_name,post_sort,status,del_flag,create_by,create_time) values(1, 'ceo',  '董事长',    1, '0',  '0','admin', sysdate);
+insert into sys_post (post_id,post_code,post_name,post_sort,status,del_flag,create_by,create_time) values(1, 'ceo',  '董事长',    1, '0',  '0','admin', now());
 
 -- ----------------------------
 -- 初始化-角色信息表数据
 -- ----------------------------
 insert into SYS_ROLE (role_id, role_name, role_key, role_sort, data_scope, menu_check_strictly, dept_check_strictly, status, del_flag, create_by, create_time, update_by, update_time, remark)
-values (2, '学员', 'student', 2, null, 1, 1, '0', '0', 'admin', to_date('16-03-2023 11:01:28', 'dd-mm-yyyy hh24:mi:ss'), 'admin', to_date('16-03-2023 11:16:25', 'dd-mm-yyyy hh24:mi:ss'), null);
+values (2, '学员', 'student', 2, null, 1, 1, '0', '0', 'admin', '2023-03-16 11:16:56', 'admin', '2023-03-16 11:16:56', null);
 insert into SYS_ROLE (role_id, role_name, role_key, role_sort, data_scope, menu_check_strictly, dept_check_strictly, status, del_flag, create_by, create_time, update_by, update_time, remark)
-values (1, '超级管理员', 'admin', 1, '1', 1, 1, '0', '0', 'admin', to_date('16-03-2023 10:31:19', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1, '超级管理员', 'admin', 1, '1', 1, 1, '0', '0', 'admin', '2023-03-16 11:16:56', null, null, null);
 commit;
 
 
@@ -80,25 +80,25 @@ values (115, '代码生成', 3, 2, 'gen', 'tool/gen/index', 1, 0, 'C', '0', '0',
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
 values (116, '系统接口', 3, 3, 'swagger', 'tool/swagger/index', 1, 0, 'C', '0', '0', '0', 'tool:swagger:list', 'swagger', 'admin', null, null, null, '系统接口菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (121, '人员分组', 1, 11, 'group', 'system/group/index', 1, 0, 'C', '0', '0', null, 'system:group:list', 'group', 'admin', to_date('28-01-2023 19:40:40', 'dd-mm-yyyy hh24:mi:ss'), null, null, '人员分组菜单');
+values (121, '人员分组', 1, 11, 'group', 'system/group/index', 1, 0, 'C', '0', '0', null, 'system:group:list', 'group', 'admin', '2023-03-16 11:16:56', null, null, '人员分组菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
 values (220, '操作日志', 108, 1, 'operlog', 'monitor/operlog/index', 1, 0, 'C', '0', '0', '0', 'monitor:operlog:list', 'form', 'admin', null, null, null, '操作日志菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
 values (230, '登录日志', 108, 2, 'logininfor', 'monitor/logininfor/index', 1, 0, 'C', '0', '0', '0', 'monitor:logininfor:list', 'logininfor', 'admin', null, null, null, '登录日志菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (300, '图片管理', 8, 1, 'photo', 'fms/photo/index', 1, 0, 'C', '0', '0', null, 'fms:photo:list', 'photo', 'admin', to_date('14-12-2021 15:24:20', 'dd-mm-yyyy hh24:mi:ss'), null, null, '图片管理菜单');
+values (300, '图片管理', 8, 1, 'photo', 'fms/photo/index', 1, 0, 'C', '0', '0', null, 'fms:photo:list', 'photo', 'admin', '2023-03-16 11:16:56', null, null, '图片管理菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (305, '文件管理', 8, 1, 'files', 'fms/files/index', 1, 0, 'C', '0', '0', null, 'fms:files:list', 'film', 'admin', to_date('17-12-2021 23:15:50', 'dd-mm-yyyy hh24:mi:ss'), null, null, '文件管理菜单');
+values (305, '文件管理', 8, 1, 'files', 'fms/files/index', 1, 0, 'C', '0', '0', null, 'fms:files:list', 'film', 'admin', '2023-03-16 11:16:56', null, null, '文件管理菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (320, '题库分类', 9, 1, 'examtype', 'questions/examtype/index', 1, 0, 'C', '0', '0', null, 'questions:examtype:list', 'examtype', 'admin', to_date('14-12-2022 14:28:22', 'dd-mm-yyyy hh24:mi:ss'), null, null, '考试分类菜单');
+values (320, '题库分类', 9, 1, 'examtype', 'questions/examtype/index', 1, 0, 'C', '0', '0', null, 'questions:examtype:list', 'examtype', 'admin', '2023-03-16 11:16:56', null, null, '考试分类菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (325, '题库设置', 9, 2, 'questionsbank', 'questions/questionsbank/index', 1, 0, 'C', '0', '0', null, 'questions:questionsbank:list', 'questionsbank', 'admin', to_date('19-12-2022 14:10:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, '题库管理菜单');
+values (325, '题库设置', 9, 2, 'questionsbank', 'questions/questionsbank/index', 1, 0, 'C', '0', '0', null, 'questions:questionsbank:list', 'questionsbank', 'admin', '2023-03-16 11:16:56', null, null, '题库管理菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (330, '考试题目管理', 9, 5, 'examquestions', 'questions/examquestions/index', 1, 0, 'C', '0', '0', null, 'questions:examquestions:list', 'examquestions', 'admin', to_date('27-12-2022 20:08:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, '考试题目管理菜单');
+values (330, '考试题目管理', 9, 5, 'examquestions', 'questions/examquestions/index', 1, 0, 'C', '0', '0', null, 'questions:examquestions:list', 'examquestions', 'admin', '2023-03-16 11:16:56', null, null, '考试题目管理菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (350, '创建考试', 10, 1, 'examtask', 'exam/examtask/index', 1, 0, 'C', '0', '0', null, 'exam:examtask:list', 'examtask', 'admin', to_date('06-01-2023 13:53:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, '创建考试菜单');
+values (350, '创建考试', 10, 1, 'examtask', 'exam/examtask/index', 1, 0, 'C', '0', '0', null, 'exam:examtask:list', 'examtask', 'admin', '2023-03-16 11:16:56', null, null, '创建考试菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (360, '开始考试', 11, 1, 'examstart', 'onlineexam/examstart/index', 1, 0, 'C', '0', '0', null, 'onlineexam:data:list', 'examstart', 'admin', to_date('06-01-2023 13:53:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, '开始考试菜单');
+values (360, '开始考试', 11, 1, 'examstart', 'onlineexam/examstart/index', 1, 0, 'C', '0', '0', null, 'onlineexam:data:list', 'examstart', 'admin', '2023-03-16 11:16:56', null, null, '开始考试菜单');
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
 values (1001, '用户查询', 100, 1, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:query', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
@@ -224,75 +224,75 @@ values (1061, '部门导入', 103, 5, null, null, 1, 0, 'F', '0', '0', '0', 'sys
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
 values (1062, '用户导入', 100, 7, null, null, 1, 0, 'F', '0', '0', '0', 'system:user:wechatin', '#', 'admin', null, null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1080, '人员分组查询', 121, 1, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:query', '#', 'admin', to_date('28-01-2023 20:02:09', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1080, '人员分组查询', 121, 1, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:query', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1081, '人员分组新增', 121, 2, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:add', '#', 'admin', to_date('28-01-2023 20:02:09', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1081, '人员分组新增', 121, 2, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:add', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1082, '人员分组修改', 121, 3, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:edit', '#', 'admin', to_date('28-01-2023 20:02:09', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1082, '人员分组修改', 121, 3, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:edit', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1083, '人员分组删除', 121, 4, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:remove', '#', 'admin', to_date('28-01-2023 20:02:10', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1083, '人员分组删除', 121, 4, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:remove', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1084, '人员分组导出', 121, 5, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:export', '#', 'admin', to_date('28-01-2023 20:02:10', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1084, '人员分组导出', 121, 5, '#', null, 1, 0, 'F', '0', '0', null, 'system:group:export', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1390, '图片管理查询', 300, 1, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:query', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1390, '图片管理查询', 300, 1, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:query', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1391, '图片管理新增', 300, 2, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:add', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1391, '图片管理新增', 300, 2, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:add', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1392, '图片管理修改', 300, 3, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:edit', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1392, '图片管理修改', 300, 3, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:edit', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1393, '图片管理删除', 300, 4, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:remove', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1393, '图片管理删除', 300, 4, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:remove', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1394, '图片管理下载', 300, 5, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:export', '#', 'admin', to_date('14-12-2021 15:28:21', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1394, '图片管理下载', 300, 5, '#', null, 1, 0, 'F', '0', '0', null, 'fms:photo:export', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1420, '文件管理查询', 305, 1, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:query', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1420, '文件管理查询', 305, 1, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:query', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1421, '文件管理新增', 305, 2, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:add', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1421, '文件管理新增', 305, 2, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:add', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1422, '文件管理修改', 305, 3, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:edit', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1422, '文件管理修改', 305, 3, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:edit', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1423, '文件管理删除', 305, 4, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:remove', '#', 'admin', to_date('17-12-2021 23:18:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1423, '文件管理删除', 305, 4, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:remove', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1424, '文件管理下载', 305, 5, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:export', '#', 'admin', to_date('17-12-2021 23:18:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1424, '文件管理下载', 305, 5, '#', null, 1, 0, 'F', '0', '0', null, 'fms:files:export', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1501, '考试分类查询', 320, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:query', '#', 'admin', to_date('14-12-2022 14:32:15', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1501, '考试分类查询', 320, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:query', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1502, '考试分类新增', 320, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:add', '#', 'admin', to_date('14-12-2022 14:32:15', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1502, '考试分类新增', 320, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:add', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1503, '考试分类修改', 320, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:edit', '#', 'admin', to_date('14-12-2022 14:32:15', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1503, '考试分类修改', 320, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:edit', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1504, '考试分类删除', 320, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:remove', '#', 'admin', to_date('14-12-2022 14:32:16', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1504, '考试分类删除', 320, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:remove', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1505, '考试分类导出', 320, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:export', '#', 'admin', to_date('14-12-2022 14:32:16', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1505, '考试分类导出', 320, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examtype:export', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1525, '题库管理查询', 325, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:query', '#', 'admin', to_date('19-12-2022 14:10:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1525, '题库管理查询', 325, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:query', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1526, '题库管理新增', 325, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:add', '#', 'admin', to_date('19-12-2022 14:10:57', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1526, '题库管理新增', 325, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:add', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1527, '题库管理修改', 325, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:edit', '#', 'admin', to_date('19-12-2022 14:10:58', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1527, '题库管理修改', 325, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:edit', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1528, '题库管理删除', 325, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:remove', '#', 'admin', to_date('19-12-2022 14:10:58', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1528, '题库管理删除', 325, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:remove', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1529, '题库管理导出', 325, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:export', '#', 'admin', to_date('19-12-2022 14:10:58', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1529, '题库管理导出', 325, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:questionsbank:export', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1541, '考试题目查询', 330, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:query', '#', 'admin', to_date('27-12-2022 20:10:55', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1541, '考试题目查询', 330, 1, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:query', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1542, '考试题目新增', 330, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:add', '#', 'admin', to_date('27-12-2022 20:10:55', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1542, '考试题目新增', 330, 2, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:add', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1543, '考试题目修改', 330, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:edit', '#', 'admin', to_date('27-12-2022 20:10:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1543, '考试题目修改', 330, 3, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:edit', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1544, '考试题目删除', 330, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:remove', '#', 'admin', to_date('27-12-2022 20:10:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1544, '考试题目删除', 330, 4, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:remove', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1545, '考试题目导出', 330, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:export', '#', 'admin', to_date('27-12-2022 20:10:56', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1545, '考试题目导出', 330, 5, '#', null, 1, 0, 'F', '0', '0', null, 'questions:examquestions:export', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1601, '创建考试查询', 350, 1, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:query', '#', 'admin', to_date('06-01-2023 13:56:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1601, '创建考试查询', 350, 1, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:query', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1602, '创建考试新增', 350, 2, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:add', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1602, '创建考试新增', 350, 2, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:add', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1603, '创建考试修改', 350, 3, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:edit', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1603, '创建考试修改', 350, 3, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:edit', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1604, '创建考试删除', 350, 4, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:remove', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1604, '创建考试删除', 350, 4, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:remove', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 insert into SYS_MENU (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, del_flag, perms, icon, create_by, create_time, update_by, update_time, remark)
-values (1605, '创建考试导出', 350, 5, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:export', '#', 'admin', to_date('06-01-2023 13:56:01', 'dd-mm-yyyy hh24:mi:ss'), null, null, null);
+values (1605, '创建考试导出', 350, 5, '#', null, 1, 0, 'F', '0', '0', null, 'exam:examtask:export', '#', 'admin', '2023-03-16 11:16:56', null, null, null);
 commit;
 
 
@@ -410,61 +410,61 @@ insert into sys_user_post values ('2', '2');
 -- ----------------------------
 -- 初始化-字典类型表
 -- ----------------------------
-insert into sys_dict_type values(1,  '用户性别', 'sys_user_sex',        '0', 'admin', sysdate, '', null, '用户性别列表');
-insert into sys_dict_type values(2,  '菜单状态', 'sys_show_hide',       '0', 'admin', sysdate, '', null, '菜单状态列表');
-insert into sys_dict_type values(3,  '系统开关', 'sys_normal_disable',  '0', 'admin', sysdate, '', null, '系统开关列表');
-insert into sys_dict_type values(4,  '任务状态', 'sys_job_status',      '0', 'admin', sysdate, '', null, '任务状态列表');
-insert into sys_dict_type values(5,  '任务分组', 'sys_job_group',       '0', 'admin', sysdate, '', null, '任务分组列表');
-insert into sys_dict_type values(6,  '系统是否', 'sys_yes_no',          '0', 'admin', sysdate, '', null, '系统是否列表');
-insert into sys_dict_type values(7,  '通知类型', 'sys_notice_type',     '0', 'admin', sysdate, '', null, '通知类型列表');
-insert into sys_dict_type values(8,  '通知状态', 'sys_notice_status',   '0', 'admin', sysdate, '', null, '通知状态列表');
-insert into sys_dict_type values(9,  '操作类型', 'sys_oper_type',       '0', 'admin', sysdate, '', null, '操作类型列表');
-insert into sys_dict_type values(10, '系统状态', 'sys_common_status',   '0', 'admin', sysdate, '', null, '登录状态列表');
+insert into sys_dict_type values(1,  '用户性别', 'sys_user_sex',        '0', 'admin', now(), '', null, '用户性别列表');
+insert into sys_dict_type values(2,  '菜单状态', 'sys_show_hide',       '0', 'admin', now(), '', null, '菜单状态列表');
+insert into sys_dict_type values(3,  '系统开关', 'sys_normal_disable',  '0', 'admin', now(), '', null, '系统开关列表');
+insert into sys_dict_type values(4,  '任务状态', 'sys_job_status',      '0', 'admin', now(), '', null, '任务状态列表');
+insert into sys_dict_type values(5,  '任务分组', 'sys_job_group',       '0', 'admin', now(), '', null, '任务分组列表');
+insert into sys_dict_type values(6,  '系统是否', 'sys_yes_no',          '0', 'admin', now(), '', null, '系统是否列表');
+insert into sys_dict_type values(7,  '通知类型', 'sys_notice_type',     '0', 'admin', now(), '', null, '通知类型列表');
+insert into sys_dict_type values(8,  '通知状态', 'sys_notice_status',   '0', 'admin', now(), '', null, '通知状态列表');
+insert into sys_dict_type values(9,  '操作类型', 'sys_oper_type',       '0', 'admin', now(), '', null, '操作类型列表');
+insert into sys_dict_type values(10, '系统状态', 'sys_common_status',   '0', 'admin', now(), '', null, '登录状态列表');
 
 -- ----------------------------
 -- 初始化-字典数据表
 -- ----------------------------
-insert into sys_dict_data values(1,  1,  '男',       '0',       'sys_user_sex',        '',   '',        'Y', '0', 'admin', sysdate, '', null, '性别男');
-insert into sys_dict_data values(2,  2,  '女',       '1',       'sys_user_sex',        '',   '',        'N', '0', 'admin', sysdate, '', null, '性别女');
-insert into sys_dict_data values(3,  3,  '未知',     '2',       'sys_user_sex',        '',   '',        'N', '0', 'admin', sysdate, '', null, '性别未知');
-insert into sys_dict_data values(4,  1,  '显示',     '0',       'sys_show_hide',       '',   'primary', 'Y', '0', 'admin', sysdate, '', null, '显示菜单');
-insert into sys_dict_data values(5,  2,  '隐藏',     '1',       'sys_show_hide',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, '隐藏菜单');
-insert into sys_dict_data values(6,  1,  '正常',     '0',       'sys_normal_disable',  '',   'primary', 'Y', '0', 'admin', sysdate, '', null, '正常状态');
-insert into sys_dict_data values(7,  2,  '停用',     '1',       'sys_normal_disable',  '',   'danger',  'N', '0', 'admin', sysdate, '', null, '停用状态');
-insert into sys_dict_data values(8,  1,  '正常',     '0',       'sys_job_status',      '',   'primary', 'Y', '0', 'admin', sysdate, '', null, '正常状态');
-insert into sys_dict_data values(9,  2,  '暂停',     '1',       'sys_job_status',      '',   'danger',  'N', '0', 'admin', sysdate, '', null, '停用状态');
-insert into sys_dict_data values(10, 1,  '默认',     'DEFAULT', 'sys_job_group',       '',   '',        'Y', '0', 'admin', sysdate, '', null, '默认分组');
-insert into sys_dict_data values(11, 2,  '系统',     'SYSTEM',  'sys_job_group',       '',   '',        'N', '0', 'admin', sysdate, '', null, '系统分组');
-insert into sys_dict_data values(12, 1,  '是',       'Y',       'sys_yes_no',          '',   'primary', 'Y', '0', 'admin', sysdate, '', null, '系统默认是');
-insert into sys_dict_data values(13, 2,  '否',       'N',       'sys_yes_no',          '',   'danger',  'N', '0', 'admin', sysdate, '', null, '系统默认否');
-insert into sys_dict_data values(14, 1,  '通知',     '1',       'sys_notice_type',     '',   'warning', 'Y', '0', 'admin', sysdate, '', null, '通知');
-insert into sys_dict_data values(15, 2,  '公告',     '2',       'sys_notice_type',     '',   'success', 'N', '0', 'admin', sysdate, '', null, '公告');
-insert into sys_dict_data values(16, 1,  '正常',     '0',       'sys_notice_status',   '',   'primary', 'Y', '0', 'admin', sysdate, '', null, '正常状态');
-insert into sys_dict_data values(17, 2,  '关闭',     '1',       'sys_notice_status',   '',   'danger',  'N', '0', 'admin', sysdate, '', null, '关闭状态');
-insert into sys_dict_data values(18, 1,  '新增',     '1',       'sys_oper_type',       '',   'info',    'N', '0', 'admin', sysdate, '', null, '新增操作');
-insert into sys_dict_data values(19, 2,  '修改',     '2',       'sys_oper_type',       '',   'info',    'N', '0', 'admin', sysdate, '', null, '修改操作');
-insert into sys_dict_data values(20, 3,  '删除',     '3',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, '删除操作');
-insert into sys_dict_data values(21, 4,  '授权',     '4',       'sys_oper_type',       '',   'primary', 'N', '0', 'admin', sysdate, '', null, '授权操作');
-insert into sys_dict_data values(22, 5,  '导出',     '5',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', sysdate, '', null, '导出操作');
-insert into sys_dict_data values(23, 6,  '导入',     '6',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', sysdate, '', null, '导入操作');
-insert into sys_dict_data values(24, 7,  '强退',     '7',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, '强退操作');
-insert into sys_dict_data values(25, 8,  '生成代码', '8',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', sysdate, '', null, '生成操作');
-insert into sys_dict_data values(26, 9,  '清空数据', '9',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', sysdate, '', null, '清空操作');
-insert into sys_dict_data values(27, 1,  '成功',     '0',       'sys_common_status',   '',   'primary', 'N', '0', 'admin', sysdate, '', null, '正常状态');
-insert into sys_dict_data values(28, 2,  '失败',     '1',       'sys_common_status',   '',   'danger',  'N', '0', 'admin', sysdate, '', null, '停用状态');
+insert into sys_dict_data values(1,  1,  '男',       '0',       'sys_user_sex',        '',   '',        'Y', '0', 'admin', now(), '', null, '性别男');
+insert into sys_dict_data values(2,  2,  '女',       '1',       'sys_user_sex',        '',   '',        'N', '0', 'admin', now(), '', null, '性别女');
+insert into sys_dict_data values(3,  3,  '未知',     '2',       'sys_user_sex',        '',   '',        'N', '0', 'admin', now(), '', null, '性别未知');
+insert into sys_dict_data values(4,  1,  '显示',     '0',       'sys_show_hide',       '',   'primary', 'Y', '0', 'admin', now(), '', null, '显示菜单');
+insert into sys_dict_data values(5,  2,  '隐藏',     '1',       'sys_show_hide',       '',   'danger',  'N', '0', 'admin', now(), '', null, '隐藏菜单');
+insert into sys_dict_data values(6,  1,  '正常',     '0',       'sys_normal_disable',  '',   'primary', 'Y', '0', 'admin', now(), '', null, '正常状态');
+insert into sys_dict_data values(7,  2,  '停用',     '1',       'sys_normal_disable',  '',   'danger',  'N', '0', 'admin', now(), '', null, '停用状态');
+insert into sys_dict_data values(8,  1,  '正常',     '0',       'sys_job_status',      '',   'primary', 'Y', '0', 'admin', now(), '', null, '正常状态');
+insert into sys_dict_data values(9,  2,  '暂停',     '1',       'sys_job_status',      '',   'danger',  'N', '0', 'admin', now(), '', null, '停用状态');
+insert into sys_dict_data values(10, 1,  '默认',     'DEFAULT', 'sys_job_group',       '',   '',        'Y', '0', 'admin', now(), '', null, '默认分组');
+insert into sys_dict_data values(11, 2,  '系统',     'SYSTEM',  'sys_job_group',       '',   '',        'N', '0', 'admin', now(), '', null, '系统分组');
+insert into sys_dict_data values(12, 1,  '是',       'Y',       'sys_yes_no',          '',   'primary', 'Y', '0', 'admin', now(), '', null, '系统默认是');
+insert into sys_dict_data values(13, 2,  '否',       'N',       'sys_yes_no',          '',   'danger',  'N', '0', 'admin', now(), '', null, '系统默认否');
+insert into sys_dict_data values(14, 1,  '通知',     '1',       'sys_notice_type',     '',   'warning', 'Y', '0', 'admin', now(), '', null, '通知');
+insert into sys_dict_data values(15, 2,  '公告',     '2',       'sys_notice_type',     '',   'success', 'N', '0', 'admin', now(), '', null, '公告');
+insert into sys_dict_data values(16, 1,  '正常',     '0',       'sys_notice_status',   '',   'primary', 'Y', '0', 'admin', now(), '', null, '正常状态');
+insert into sys_dict_data values(17, 2,  '关闭',     '1',       'sys_notice_status',   '',   'danger',  'N', '0', 'admin', now(), '', null, '关闭状态');
+insert into sys_dict_data values(18, 1,  '新增',     '1',       'sys_oper_type',       '',   'info',    'N', '0', 'admin', now(), '', null, '新增操作');
+insert into sys_dict_data values(19, 2,  '修改',     '2',       'sys_oper_type',       '',   'info',    'N', '0', 'admin', now(), '', null, '修改操作');
+insert into sys_dict_data values(20, 3,  '删除',     '3',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', now(), '', null, '删除操作');
+insert into sys_dict_data values(21, 4,  '授权',     '4',       'sys_oper_type',       '',   'primary', 'N', '0', 'admin', now(), '', null, '授权操作');
+insert into sys_dict_data values(22, 5,  '导出',     '5',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', now(), '', null, '导出操作');
+insert into sys_dict_data values(23, 6,  '导入',     '6',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', now(), '', null, '导入操作');
+insert into sys_dict_data values(24, 7,  '强退',     '7',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', now(), '', null, '强退操作');
+insert into sys_dict_data values(25, 8,  '生成代码', '8',       'sys_oper_type',       '',   'warning', 'N', '0', 'admin', now(), '', null, '生成操作');
+insert into sys_dict_data values(26, 9,  '清空数据', '9',       'sys_oper_type',       '',   'danger',  'N', '0', 'admin', now(), '', null, '清空操作');
+insert into sys_dict_data values(27, 1,  '成功',     '0',       'sys_common_status',   '',   'primary', 'N', '0', 'admin', now(), '', null, '正常状态');
+insert into sys_dict_data values(28, 2,  '失败',     '1',       'sys_common_status',   '',   'danger',  'N', '0', 'admin', now(), '', null, '停用状态');
 
 -- ----------------------------
 -- 初始化-参数配置表
 -- ----------------------------
-insert into sys_config values(1, '主框架页-默认皮肤样式名称', 'sys.index.skinName',            'skin-blue',     'Y', 'admin', sysdate, '', null, '蓝色 skin-blue、绿色 skin-green、紫色 skin-purple、红色 skin-red、黄色 skin-yellow' );
-insert into sys_config values(2, '用户管理-账号初始密码',     'sys.user.initPassword',         '123456',        'Y', 'admin', sysdate, '', null, '初始化密码 123456' );
-insert into sys_config values(3, '主框架页-侧边栏主题',       'sys.index.sideTheme',           'theme-dark',    'Y', 'admin', sysdate, '', null, '深色主题theme-dark，浅色主题theme-light' );
-insert into sys_config values(4, '账号自助-验证码开关',       'sys.account.captchaOnOff',      'true',          'Y', 'admin', sysdate, '', null, '是否开启登录验证码功能（true开启，false关闭）');
+insert into sys_config values(1, '主框架页-默认皮肤样式名称', 'sys.index.skinName',            'skin-blue',     'Y', 'admin', now(), '', null, '蓝色 skin-blue、绿色 skin-green、紫色 skin-purple、红色 skin-red、黄色 skin-yellow' );
+insert into sys_config values(2, '用户管理-账号初始密码',     'sys.user.initPassword',         '123456',        'Y', 'admin', now(), '', null, '初始化密码 123456' );
+insert into sys_config values(3, '主框架页-侧边栏主题',       'sys.index.sideTheme',           'theme-dark',    'Y', 'admin', now(), '', null, '深色主题theme-dark，浅色主题theme-light' );
+insert into sys_config values(4, '账号自助-验证码开关',       'sys.account.captchaOnOff',      'true',          'Y', 'admin', now(), '', null, '是否开启登录验证码功能（true开启，false关闭）');
 
 -- ----------------------------
 -- 初始化-公告信息表数据
 -- ----------------------------
-insert into sys_notice values('1', '温馨提醒：2018-07-01 新版本发布啦', '2', '新版本内容', '0', 'admin', sysdate, '', null, '管理员');
-insert into sys_notice values('2', '维护通知：2018-07-01 系统凌晨维护', '1', '维护内容',   '0', 'admin', sysdate, '', null, '管理员');
+insert into sys_notice values('1', '温馨提醒：2018-07-01 新版本发布啦', '2', '新版本内容', '0', 'admin', now(), '', null, '管理员');
+insert into sys_notice values('2', '维护通知：2018-07-01 系统凌晨维护', '1', '维护内容',   '0', 'admin', now(), '', null, '管理员');
 commit;
 

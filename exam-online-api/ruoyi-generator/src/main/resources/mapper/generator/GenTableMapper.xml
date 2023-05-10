@@ -141,7 +141,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<insert id="insertGenTable" parameterType="GenTable">
 		<selectKey keyProperty="tableId" resultType="long" order="BEFORE">
-			select nvl(max(table_id),0) + 1 from gen_table
+			select IFNULL(max(table_id),0) + 1 from gen_table
 		</selectKey>	
         insert into gen_table (
 			table_id,
@@ -160,7 +160,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="createBy != null and createBy != ''">create_by,</if>
 			create_time
          )values(
-			(select nvl(max(table_id),0) + 1 from gen_table),
+			(select IFNULL(max(table_id),0) + 1 from gen_table),
 			<if test="tableName != null">#{tableName},</if>
 			<if test="tableComment != null and tableComment != ''">#{tableComment},</if>
 			<if test="className != null and className != ''">#{className},</if>
@@ -174,7 +174,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="genPath != null and genPath != ''">#{genPath},</if>
 			<if test="remark != null and remark != ''">#{remark},</if>
  			<if test="createBy != null and createBy != ''">#{createBy},</if>
-			sysdate
+			now()
          )
     </insert>
 
@@ -201,7 +201,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="options != null and options != ''">options = #{options},</if>
             <if test="updateBy != null and updateBy != ''">update_by = #{updateBy},</if>
             <if test="remark != null">remark = #{remark},</if>
-            update_time = sysdate
+            update_time = now()
         </set>
         where table_id = #{tableId}
     </update>

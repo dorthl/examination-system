@@ -7,7 +7,7 @@ spring:
         druid:
             # 主库数据源
             master:
-               url: jdbc:mysql://localhost:3306/ry-vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+               url: jdbc:mysql://localhost:3306/examination?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
                username: root
                password: 5ba1c9ba7ca88541aada797c7242c5c4            
                 # url: jdbc:oracle:thin:@127.0.0.1:1521/xchwdb
@@ -60,3 +60,16 @@ spring:
                 wall:
                     config:
                         multi-statement-allow: true
+    redis:
+        database: 0 # Redis数据库索引（默认为0）
+        # host: localhost # Redis服务器地址
+        host: 127.0.0.1
+        port: 6379 # Redis服务器连接端口
+        password: 5ba1c9ba7ca88541a # Redis服务器连接密码（默认为空）
+        timeout: 20000 # 连接超时时间（毫秒）
+        jedis:
+            pool:
+            max-active: -1 # 连接池最大连接数（使用负值表示没有限制）
+            max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）
+            max-idle: 100 # 连接池中的最大空闲连接
+            min-idle: 10 # 连接池中的最小空闲连接 

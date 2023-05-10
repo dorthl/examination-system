@@ -44,14 +44,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             create_time,
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-            (select nvl(max(type_id),0) + 1 from exam_type),
+            (select IFNULL(max(type_id),0) + 1 from exam_type),
             <if test="parentId != null">#{parentId},</if>
             <if test="typeCode != null">#{typeCode},</if>
             <if test="typeName != null and typeName != ''">#{typeName},</if>
             <if test="orderId != null">#{orderId},</if>
             0,
             <if test="createBy != null">#{createBy},</if>
-            sysdate,
+            now(),
          </trim>
     </insert>
 

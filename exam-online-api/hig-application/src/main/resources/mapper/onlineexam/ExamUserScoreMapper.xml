@@ -62,7 +62,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
     <insert id="intoExamUserScore" parameterType="ExamUserScore" >
         insert into exam_user_score
-		select a.exam_code, a.user_code, b.start_time, sysdate as end_time, d.questions_score, a.exam_score,c.exam_number,a.answered_number,c.exam_number - a.answered_number as not_answered, 0 as status from
+		select a.exam_code, a.user_code, b.start_time, now() as end_time, d.questions_score, a.exam_score,c.exam_number,a.answered_number,c.exam_number - a.answered_number as not_answered, 0 as status from
 		(
 		select exam_code, user_code, sum(exam_score) as exam_score,count(questions_code) as answered_number from exam_finish_answer 
 		where exam_code = #{examCode} and user_code = #{userCode} group by exam_code,user_code

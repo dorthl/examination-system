@@ -59,13 +59,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             create_time,
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-            (select nvl(max(group_id),0) + 1  from sys_group),
+            (select IFNULL(max(group_id),0) + 1  from sys_group),
             <if test="groupCode != null and groupCode != ''">#{groupCode},</if>
             <if test="groupName != null and groupName != ''">#{groupName},</if>
             <if test="groupDescribe != null">#{groupDescribe},</if>
             0,
             <if test="createBy != null">#{createBy},</if>
-            sysdate,
+            now(),
          </trim>
     </insert>
 

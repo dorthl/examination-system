@@ -80,12 +80,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
     
    <update id="updateStartTime" parameterType="ExamTaskPerson">
-        update exam_task_person set start_time = sysdate
+        update exam_task_person set start_time = now()
         where exam_code = #{examCode} and user_code = #{userCode}
     </update>
     
     <update id="updateDoneStatus" parameterType="ExamTaskPerson">
-        update exam_task_person set end_time = sysdate, status = 0 
+        update exam_task_person set end_time = now(), status = 0 
         where exam_code = #{examCode} and user_code = #{userCode}
     </update>
 

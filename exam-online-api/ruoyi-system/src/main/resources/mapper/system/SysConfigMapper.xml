@@ -75,14 +75,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="remark != null and remark != ''">remark,</if>
  			create_time
         )values(
-            (select nvl(max(config_id),0) + 1 from sys_config),
+            (select IFNULL(max(config_id),0) + 1 from sys_config),
 			<if test="configName != null and configName != ''">#{configName},</if>
 			<if test="configKey != null and configKey != ''">#{configKey},</if>
 			<if test="configValue != null and configValue != ''">#{configValue},</if>
 			<if test="configType != null and configType != ''">#{configType},</if>
 			<if test="createBy != null and createBy != ''">#{createBy},</if>
 			<if test="remark != null and remark != ''">#{remark},</if>
- 			sysdate
+ 			now()
 		)
     </insert>
 	 
@@ -95,7 +95,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="configType != null and configType != ''">config_type = #{configType},</if>
             <if test="updateBy != null and updateBy != ''">update_by = #{updateBy},</if>
             <if test="remark != null">remark = #{remark},</if>
- 			update_time = sysdate
+ 			update_time = now()
         </set>
         where config_id = #{configId}
     </update>

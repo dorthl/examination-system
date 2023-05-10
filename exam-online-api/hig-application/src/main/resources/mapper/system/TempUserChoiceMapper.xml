@@ -37,7 +37,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="choiceCode != null and choiceCode != ''">#{choiceCode},</if>
             <if test="userCode != null and userCode != ''">#{userCode},</if>
-            (select nvl(max(order_id),0) + 1 from temp_user_choice where choice_code = #{choiceCode}),
+            (select IFNULL(max(order_id),0) + 1 from temp_user_choice where choice_code = #{choiceCode}),
          </trim>
     </insert>
 
