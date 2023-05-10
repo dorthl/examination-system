@@ -29,7 +29,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </resultMap>
 
     <select id="selectCurrentExam" parameterType="String" resultMap="ExamTitleDataResult">
-	    select a.exam_id, a.exam_code, a.exam_name, a.exam_describe, a.build_type, a.force_done, a.exam_bank, a.exam_bank_text, a.picture_url, a.start_time, a.end_time,now() as current_date, a.exam_duration, b.judge_number,c.radio_number, d.choice_number, e.questions_score, a.status, a.create_by, a.create_dept, a.create_time
+	    select a.exam_id, a.exam_code, a.exam_name, a.exam_describe, a.build_type, a.force_done, a.exam_bank, 
+		a.exam_bank_text, a.picture_url, a.start_time, a.end_time,now() as current_date, a.exam_duration, 
+		b.judge_number,c.radio_number, d.choice_number, e.questions_score, a.status, a.create_by, a.create_dept, a.create_time
 		from exam_task_manager a 
 		left join
 		(
