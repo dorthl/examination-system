@@ -3,7 +3,7 @@
     <div style ="margin-left: 15px">
       <el-row :gutter="10" class="mb8">
         <el-col :span="1.5">
-	        <el-button 
+	        <el-button
 	        @click="onClose"
 	        plain
 	        icon="el-icon-s-home"
@@ -116,7 +116,7 @@
                 :label="parseInt(dict.dictValue)"
               >{{dict.dictLabel}}</el-radio>
             </el-radio-group>
-          </el-form-item>          
+          </el-form-item>
         </el-form>
     </div>
    </div>
@@ -132,7 +132,7 @@ import { listAnswer, getAnswer, delAnswer, addAnswer, updateAnswer, exportAnswer
 
 export default {
   name: "Examquestions",
-  components: { VueUeditorWrap},  
+  components: { VueUeditorWrap},
   data() {
     return {
       // 表单参数
@@ -190,7 +190,7 @@ export default {
         // 上传文件接口（这个地址是我为了方便各位体验文件上传功能搭建的临时接口，请勿在生产环境使用！！！）
         serverUrl: baseApiUrl + '/ueditor/config',
         // UEditor 资源文件的存放路径，如果你使用的是 vue-cli 生成的项目，通常不需要设置该选项，vue-ueditor-wrap 会自动处理常见的情况，如果需要特殊配置，参考下方的常见问题2
-        UEDITOR_HOME_URL: '/exam_online_ui/UEditor/'
+        UEDITOR_HOME_URL: '/UEditor/'
       },
       Ueditor: null,
       isNew: false,
@@ -200,7 +200,7 @@ export default {
         pageSize: 10,
         questionsCode: null,
         optionDescribe: null,
-      },            
+      },
     }
   },
   created() {
@@ -240,7 +240,7 @@ export default {
         createDept:null
       }
       this.resetForm("form");
-    },   
+    },
     /** 查询考试题目答案列表 */
     getList() {
       listAnswer(this.queryParams).then(response => {
@@ -252,8 +252,8 @@ export default {
     showData () {
       if (this.form.questionsType === 1 || this.form.questionsType === 2) {
         // 是判断题或者说是选择题
-        this.isRadio = true       
-        this.radioValue = this.form.rightAnswer        
+        this.isRadio = true
+        this.radioValue = this.form.rightAnswer
       } else if (this.form.questionsType === 3) {
         this.isRadio = false
         this.checkItem = this.form.rightAnswer.split(",")
@@ -263,9 +263,9 @@ export default {
       getQuestionscontent(this.form.questionsCode).then(response => {
         this.textValue = response.data.questionsContent
       });
-    },        
+    },
     onClose () {
-      this.$emit('refreshData')            
+      this.$emit('refreshData')
     },
     checkData () {
       if (this.form.questionsType === undefined || this.form.questionsType === null) {
@@ -275,43 +275,43 @@ export default {
 
       if (this.Ueditor.getContentTxt() === null || this.Ueditor.getContentTxt() === '') {
         this.$message.error('未输入试题题目')
-        return false  
+        return false
       }
       this.form.questionsTitle = this.Ueditor.getContentTxt()
       this.form.questionsContent = this.textValue
       if (this.form.questionsScore === undefined || this.form.questionsScore === null || this.form.questionsScore <= 0) {
         this.$message.error('题目分数不能为零')
-        return false  
+        return false
       }
 
       if (this.form.rateNumber === 0) {
         this.$message.error('复杂度需要维护')
-        return false  
+        return false
       }
-      
+
       // 循环判断题目项目内容
       for (let i = 0; i < this.answerList.length; i ++) {
         if (this.answerList[i].optionDescribe === null) {
           this.$message.error('题目选项描述不能为空')
-          return false  
+          return false
         }
       }
-      
+
       // 判断正确答案是否填入
       if (this.form.questionsType === 1 || this.form.questionsType === 2) {
         // 是判断题或者说是选择题
         if (this.radioValue === null) {
           this.$message.error('判断题或单选题答案必须选择')
-          return false  
-        }       
+          return false
+        }
       } else if (this.form.questionsType === 3) {
         if (this.checkItem === [] || this.checkItem.length === 0) {
           this.$message.error('多选题答案必须选择')
-          return false  
-        }  
+          return false
+        }
       } else {
         this.$message.error('系统不识别的题目类型')
-        return false         
+        return false
       }
 
       return true
@@ -319,14 +319,14 @@ export default {
     handleData () {
       if (this.form.questionsType === 1 || this.form.questionsType === 2) {
         // 是判断题或者说是选择题
-       
+
         this.form.rightAnswer = this.radioValue
         for (let i = 0; i < this.answerList.length; i ++) {
           if (this.answerList[i].optionCode === this.radioValue) {
             this.answerList[i].isRight = 0
             break
           }
-        }       
+        }
       } else if (this.form.questionsType === 3) {
         let count = 0
         for (let i = 0; i < this.checkItem.length; i ++) {
@@ -337,7 +337,7 @@ export default {
             }
           }
         }
-        
+
         this.form.rightAnswer = ''
         for (let i = 0; i < this.answerList.length; i ++) {
           if (this.answerList[i].isRight === 0) {
@@ -351,7 +351,7 @@ export default {
         }
       }
     },
-    handleSave () { 
+    handleSave () {
       this.doSave(1)
     },
     handleSaveOrExit () {
@@ -372,9 +372,9 @@ export default {
           });
         }
       }
-    },   
+    },
     onChoice (choice) {
-      
+
       if (choice === 1 ) {
         if (this.bankData.judgeScore !== undefined && this.bankData.judgeScore !== null ) {
           this.form.questionsScore = this.bankData.judgeScore
@@ -400,8 +400,8 @@ export default {
           this.choiceNumber = 3
           this.init_Table()
           this.isRadio = false
-        }        
-      }   
+        }
+      }
     },
     init_Table () {
       this.answerList = []
@@ -427,13 +427,13 @@ export default {
     },
     handleAdd () {
       if (this.answerList > 10) {
-        this.$message.error('题目选项不能超过10项')        
+        this.$message.error('题目选项不能超过10项')
         return
       }
 
       for (let i = 0; i < this.answerList.length; i ++) {
         if (this.answerList[i].optionDescribe === null) {
-          this.$message.error('题目选项描述不能为空')        
+          this.$message.error('题目选项描述不能为空')
           return
         }
       }
@@ -447,10 +447,10 @@ export default {
       }
 
       this.answerList.push(answerData)
-      
+
     },
     handleDelete (row) {
-      this.answerList.splice(this.answerList.indexOf(row), 1) 
+      this.answerList.splice(this.answerList.indexOf(row), 1)
       this.resetOption()
     },
     resetOption () {
@@ -460,9 +460,9 @@ export default {
         this.answerList[i].optionCode = this.optionItem[i]
       }
     },
-    onEditorReady (editor) {      
+    onEditorReady (editor) {
       this.Ueditor = editor
-    }                   
+    }
   }
 };
 </script>
@@ -503,11 +503,11 @@ export default {
 }
 
 .ueditor-area {
- margin:  0px 0px 10px 0px; 
+ margin:  0px 0px 10px 0px;
 }
 
 .star-text {
     color: #ff4949;
-    margin-right: 4px;  
+    margin-right: 4px;
 }
 </style>

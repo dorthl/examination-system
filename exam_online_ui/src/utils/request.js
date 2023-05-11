@@ -9,8 +9,6 @@ axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 const service = axios.create({
   // axios中请求配置有baseURL选项，表示请求URL公共部分
   baseURL: process.env.VUE_APP_BASE_API, // 本地后端加路径
-  // baseURL: 'http://127.0.0.1:8080/exam-online-api', // 发服务器使用内网
-
   timeout: 180000
 })
 // request拦截器
