@@ -163,8 +163,6 @@ logging:
     com.hig: debug
     org.springframework: warn
 
-
-
 # token配置
 token:
     # 令牌自定义标识
